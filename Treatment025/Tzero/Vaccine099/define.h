@@ -23,7 +23,7 @@
 
 #define MAXNUM 4294967295.             // for 32 bits compilers
 
-#define YEARS 200                 /* Maximum run time in years */
+#define YEARS 300                 /* Maximum run time in years */
 #define MAXTIME YEARS*365         /* Maximum run time in months */
 #define MAXSIM 200              /* Number of simulations to evaluate averages */
 #define L 317                 /* Linear size of the lattice */
