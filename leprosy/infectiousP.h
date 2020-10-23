@@ -23,23 +23,19 @@ void infectiouspfunc(int i, int j)
 		switch(Person[i][j].Tracing)
 			{
 				case 1:
-					aleat();
-					Person[i][j].TimeForIdentification = 1;
-					Person[i][j].Swap = Infectious_P_Identified; // at least one day only identified and not under treatment
-					Person[i][j].TimeOnState = 0;
-					Person[i][j].FactorDeath = 3.5;
+					Person[i][j].Swap = Infectious_P_UnderTreatment;			
+					Person[i][j].TimeOnState = 0; 
+					Person[i][j].FactorDeath = 1.0;
+					New_Infectious_P_UnderTreatment++;
 					New_Infectious_P_Identified++;
-                    
-				break;
+                break;
 				
 				case 2:
-					aleat();
-					Person[i][j].TimeForIdentification = 1;
-					Person[i][j].Swap = Infectious_P_Identified; // at least one day only identified and not under treatment
-					Person[i][j].TimeOnState = 0;
-					Person[i][j].FactorDeath = 3.5;
+					Person[i][j].Swap = Infectious_P_UnderTreatment;			
+					Person[i][j].TimeOnState = 0; 
+					Person[i][j].FactorDeath = 1.0;
+					New_Infectious_P_UnderTreatment++;
 					New_Infectious_P_Identified++;
-                    
 				break;
 				
 			

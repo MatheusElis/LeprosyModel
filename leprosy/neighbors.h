@@ -57,6 +57,19 @@ int neighborsfunc(int i , int j)
 						NumberOfInfectedNeighborsM++;
 					else if(Person[a+k][b+l].Health>=Infectious_P && Person[a+k][b+l].Health<=InfectiousNotCured_P)
 						NumberOfInfectedNeighborsP++;
+			
+			
+			if((NumberOfInfectedNeighborsM + NumberOfInfectedNeighborsP)>0 )
+			{
+				if(ContactTracing==1)
+					Person[a][b].Tracing = 1; // contact tracing
+				else if(ContactTracing==2)
+				{
+					Person[a][b].Tracing = 2; // contact tracing
+				}
+			}
+			
+			
 			if((NumberOfInfectedNeighborsM + NumberOfInfectedNeighborsP) > 0) // Calculate ProbContagion
 			{
 				pm = (pow(OneMinusBetaM, (float)NumberOfInfectedNeighborsM));
@@ -75,8 +88,7 @@ int neighborsfunc(int i , int j)
 					aleat();
 					Person[a][b].StateTime = rn*(LatencyMaxM - LatencyMinM) + LatencyMinM;
 					
-					if(Person[a][b].Tracing==2)
-						Tracing = 1;
+					
 				
 					Person[a][b].FactorDeath           = 1.0;
 					
@@ -89,8 +101,7 @@ int neighborsfunc(int i , int j)
 					aleat();
 					Person[a][b].StateTime = rn*(LatencyMaxP - LatencyMinP) + LatencyMinP;
 					
-					if(Person[a][b].Tracing==2)
-						Tracing = 1;
+					
 					
 					Person[a][b].FactorDeath           = 1.0;
 					
@@ -102,13 +113,6 @@ int neighborsfunc(int i , int j)
 			else
 				Person[a][b].Swap = Susceptible;
 			
-			if((NumberOfInfectedNeighborsM + NumberOfInfectedNeighborsP)>0 && Infection==0)
-			{
-				if(ContactTracing==1)
-					Person[a][b].Tracing = 1; // contact tracing
-				else if(ContactTracing==2)
-					Person[a][b].Tracing = 2; // contact tracing
-			}
 	
 	}
 /******************************************************************************************/     

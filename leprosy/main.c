@@ -197,7 +197,7 @@ int Simulation;
 int CountYears;
 int CountDays;
 int initializer;
-int Tracing;
+
 
 
 unsigned R;
@@ -253,7 +253,7 @@ float aleat()
 
 void main(int argc, char *argv[])
 {
-    int identificador[14];
+
     int i,j;
     int seed;
     // R0        = atoi(argv[1]);
@@ -287,7 +287,6 @@ void main(int argc, char *argv[])
     
 
     diagnosed = 0;
-	//printf("Time,Susceptible,Resistant,Latent_P,Latent_M,Infectious_P,Infectious_P_Identified,Infectious_P_UnderTreatment,InfectiousNotCured_P,Infectious_M,Infectious_M_Identified,Infectious_M_UnderTreatment,InfectiousNotCured_M,RecoveredLatent_P,RecoveredLatent_M,Simulation\n");
     for(Simulation=1;Simulation<=MAXSIM;Simulation++)
     {
 
@@ -296,13 +295,13 @@ void main(int argc, char *argv[])
       seed = Simulation*10;
       R = 893221891*seed*10000;
       
+	ContactTracing = 0;	
 	ProbVaccine     = 0.0;
-    ProbOfTreatment = 0.0;
+  ProbOfTreatment = 0.0;
 	beginfunc();
   	 
-  	 CountYears = 0;
-	 CountDays  = 0;
-	
+  CountYears = 0;
+	CountDays  = 0;
 	//image(0);
 	//printf("Atributo=%d\n",Infectious_P_Identified);
 	for(timesim=0;timesim<=MAXTIME;timesim++)  
@@ -328,92 +327,93 @@ void main(int argc, char *argv[])
 	
 	
 
-	for(i=0;i<14;i++)
-		identificador[i]=0;
+
 	 for(i=1;i<=L;i++)
 	   for(j=1;j<=L;j++)
 		{
+			
+			if(Person[i][j].Tracing==2)	
+				if(Person[i][j].Immunity<ProbRecoveryPEP)
+						Person[i][j].Immunity=ProbRecoveryPEP;
+			
 			switch(Person[i][j].Health)
 			{
 				case Susceptible:
 					susceptiblefunc(i,j);
-					identificador[0]++;
+
 				break;
 				
 				case Resistant:
 					susceptiblefunc(i,j);
-					identificador[1]++;
+
 				break;
 				
 				case Latent_P:
 					latentpfunc(i,j);
-					identificador[2]++;
+
 				break;
 				
 				case Latent_M:
 					latentmfunc(i,j);
-					identificador[3]++;
+
 				break;
 				
 				case Infectious_P:
 					infectiouspfunc(i,j);
-					identificador[4]++;
+
 				break;
 				
 				case Infectious_P_Identified:
 					infectiouspfunc(i,j);
-					identificador[5]++;
+
 				break;
 				
 				case Infectious_P_UnderTreatment:
 					infectiouspfunc(i,j);
-					identificador[6]++;
+
 				break;
 				
 				case InfectiousNotCured_P:
 					infectiouspfunc(i,j);
-					identificador[7]++;
+
 				break;
 				
 				case Infectious_M:
 					infectiousmfunc(i,j);
-					identificador[8]++;
+
 				break;
 				
 				case Infectious_M_Identified:
 					infectiousmfunc(i,j);
-					identificador[9]++;
+
 				break;
 				
 				case Infectious_M_UnderTreatment:
 					infectiousmfunc(i,j);
-					identificador[10]++;
+
 				break;
 				
 				case InfectiousNotCured_M:
 					infectiousmfunc(i,j);
-					identificador[11]++;
+
 				break;
 				
 				case RecoveredLatent_P:
 					 recoveredpfunc(i,j);
-					identificador[12]++;
+
 				break;
 				
 				case RecoveredLatent_M:
 					 recoveredmfunc(i,j);
-					identificador[13]++;
+
 				break;
 			
 				
 			}
-		//if(Person[i][j].Health==Infectious_P_UnderTreatment)
-	//			identificador++;
-	//	if(Person[i][j].Health==Infectious_P)
-	//			doente++;
+
 		}
-		/*if(timesim % 365 ==0)
-		printf("%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d\n",timesim/365,identificador[0],identificador[1],identificador[2],identificador[3],identificador[4],identificador[5],identificador[6],identificador[7],identificador[8],identificador[9],identificador[10],identificador[11],identificador[12],identificador[13],Simulation);*/
+
+
 	   
 	  updatefunc();   /* Update lattice */  
 	} 

@@ -6,23 +6,18 @@ void infectiousmfunc(int i, int j)
 		switch(Person[i][j].Tracing)
 		{
 			case 1:
-				aleat();
-				Person[i][j].TimeForIdentification = 1;
-				Person[i][j].Swap = Infectious_M_Identified; // at least one day only identified and not under treatment
-				Person[i][j].TimeOnState = 0;
-				Person[i][j].FactorDeath = 3.5;
-				New_Infectious_M_Identified++;
-                
+				Person[i][j].Swap = Infectious_M_UnderTreatment;			
+				Person[i][j].TimeOnState = 0; 
+				Person[i][j].FactorDeath = 1.0;
+				New_Infectious_M_UnderTreatment++;
 			break;
 			
 			
 			case 2:
-				aleat();
-				Person[i][j].TimeForIdentification = 1;
-				Person[i][j].Swap = Infectious_M_Identified; // at least one day only identified and not under treatment
-				Person[i][j].TimeOnState = 0;
-				Person[i][j].FactorDeath = 3.5;
-				New_Infectious_M_Identified++;
+				Person[i][j].Swap = Infectious_M_UnderTreatment;			
+				Person[i][j].TimeOnState = 0; 
+				Person[i][j].FactorDeath = 1.0;
+				New_Infectious_M_UnderTreatment++;
 
 			break;
 			
