@@ -61,7 +61,7 @@
 #define LatencyMinM 3*365             /* Probability that a susceptible to become latent  paucibacillary 2 years in months*/
 #define LatencyMaxM 4*365            /* Probability that a susceptible to become latent multibacillary  12 years in months*/
 
-#define ProbSelfRecoveryP 0. //0.000614    /* per day */
+#define ProbSelfRecoveryP 0.000614    /* per day */
 
 #define ProbRecovery_M 0.953      /* after 12 months of tretament */
 #define ProbRecovery_P 0.974       /* after 6 months of tretament */

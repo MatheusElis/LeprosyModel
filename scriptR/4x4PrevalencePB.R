@@ -12,18 +12,18 @@ f <- list(
   size = 9,
   color = "#7f7f7f"
 )
-#LeprosyPrevalence Vaccine0 Treatment025
-T0m <- read_csv("data-07-07-2020/Treatment025/Tzero/Vaccine0/InfectiousPrevalencePB.csv")
+#LeprosyPrevalence Vaccine0 T025
+T0m <- read_csv("dados/data-02-02-2021/T025/it00m/v00/InfectiousPrevalencePB.csv")
 T0m <- T0m[-1,]
-T3m <- read_csv("data-07-07-2020/Treatment025/T3months/Vaccine0/InfectiousPrevalencePB.csv")
+T3m <- read_csv("dados/data-02-02-2021/T025/it03m/v00/InfectiousPrevalencePB.csv")
 T3m <- T3m[-1,]
-T6m <- read_csv("data-07-07-2020/Treatment025/T6months/Vaccine0/InfectiousPrevalencePB.csv")
+T6m <- read_csv("dados/data-02-02-2021/T025/it06m/v00/InfectiousPrevalencePB.csv")
 T6m <- T6m[-1,]
-T12m <- read_csv("data-07-07-2020/Treatment025/T1Year/Vaccine0/InfectiousPrevalencePB.csv")
+T12m <- read_csv("dados/data-02-02-2021/T025/it12m/v00/InfectiousPrevalencePB.csv")
 T12m <- T12m[-1,]
-T24m <- read_csv("data-07-07-2020/Treatment025/T2Years/Vaccine0/InfectiousPrevalencePB.csv")
+T24m <- read_csv("dados/data-02-02-2021/T025/it24m/v00/InfectiousPrevalencePB.csv")
 T24m <- T24m[-1,]
-T36m <- read_csv("data-07-07-2020/Treatment025/T3Years/Vaccine0/InfectiousPrevalencePB.csv")
+T36m <- read_csv("dados/data-02-02-2021/T025/it36m/v00/InfectiousPrevalencePB.csv")
 T36m <- T36m[-1,]
 
 PrevalencePBV00T25 <- plot_ly( x=T0m$Time, y=T0m$TotalInfectiousPB ,name = '0 Months',mode = 'lines',type = 'scatter' ) %>%
@@ -40,18 +40,18 @@ PrevalencePBV00T25 <- plot_ly( x=T0m$Time, y=T0m$TotalInfectiousPB ,name = '0 Mo
   )
 PrevalencePBV00T25
 
-#LeprosyPrevalence Vaccine0 Treatment050
-T0m <- read_csv("data-07-07-2020/Treatment050/Tzero/Vaccine0/InfectiousPrevalencePB.csv")
+#LeprosyPrevalence Vaccine0 T050
+T0m <- read_csv("dados/data-02-02-2021/T050/it00m/v00/InfectiousPrevalencePB.csv")
 T0m <- T0m[-1,]
-T3m <- read_csv("data-07-07-2020/Treatment050/T3months/Vaccine0/InfectiousPrevalencePB.csv")
+T3m <- read_csv("dados/data-02-02-2021/T050/it03m/v00/InfectiousPrevalencePB.csv")
 T3m <- T3m[-1,]
-T6m <- read_csv("data-07-07-2020/Treatment050/T6months/Vaccine0/InfectiousPrevalencePB.csv")
+T6m <- read_csv("dados/data-02-02-2021/T050/it06m/v00/InfectiousPrevalencePB.csv")
 T6m <- T6m[-1,]
-T12m <- read_csv("data-07-07-2020/Treatment050/T1Year/Vaccine0/InfectiousPrevalencePB.csv")
+T12m <- read_csv("dados/data-02-02-2021/T050/it12m/v00/InfectiousPrevalencePB.csv")
 T12m <- T12m[-1,]
-T24m <- read_csv("data-07-07-2020/Treatment050/T2Years/Vaccine0/InfectiousPrevalencePB.csv")
+T24m <- read_csv("dados/data-02-02-2021/T050/it24m/v00/InfectiousPrevalencePB.csv")
 T24m <- T24m[-1,]
-T36m <- read_csv("data-07-07-2020/Treatment050/T3Years/Vaccine0/InfectiousPrevalencePB.csv")
+T36m <- read_csv("dados/data-02-02-2021/T050/it36m/v00/InfectiousPrevalencePB.csv")
 T36m <- T36m[-1,]
 
 PrevalencePBV00T50 <- plot_ly( x=T0m$Time, y=T0m$TotalInfectiousPB ,name = '0 Months',mode = 'lines',type = 'scatter' ,showlegend = F) %>%
@@ -68,17 +68,17 @@ PrevalencePBV00T50 <- plot_ly( x=T0m$Time, y=T0m$TotalInfectiousPB ,name = '0 Mo
   )
 PrevalencePBV00T50
 
-T0m <- read_csv("data-07-07-2020/Treatment075/Tzero/Vaccine0/InfectiousPrevalencePB.csv")
+T0m <- read_csv("dados/data-02-02-2021/T075/it00m/v00/InfectiousPrevalencePB.csv")
 T0m <- T0m[-1,]
-T3m <- read_csv("data-07-07-2020/Treatment075/T3months/Vaccine0/InfectiousPrevalencePB.csv")
+T3m <- read_csv("dados/data-02-02-2021/T075/it03m/v00/InfectiousPrevalencePB.csv")
 T3m <- T3m[-1,]
-T6m <- read_csv("data-07-07-2020/Treatment075/T6months/Vaccine0/InfectiousPrevalencePB.csv")
+T6m <- read_csv("dados/data-02-02-2021/T075/it06m/v00/InfectiousPrevalencePB.csv")
 T6m <- T6m[-1,]
-T12m <- read_csv("data-07-07-2020/Treatment075/T1Year/Vaccine0/InfectiousPrevalencePB.csv")
+T12m <- read_csv("dados/data-02-02-2021/T075/it12m/v00/InfectiousPrevalencePB.csv")
 T12m <- T12m[-1,]
-T24m <- read_csv("data-07-07-2020/Treatment075/T2Years/Vaccine0/InfectiousPrevalencePB.csv")
+T24m <- read_csv("dados/data-02-02-2021/T075/it24m/v00/InfectiousPrevalencePB.csv")
 T24m <- T24m[-1,]
-T36m <- read_csv("data-07-07-2020/Treatment075/T3Years/Vaccine0/InfectiousPrevalencePB.csv")
+T36m <- read_csv("dados/data-02-02-2021/T075/it36m/v00/InfectiousPrevalencePB.csv")
 T36m <- T36m[-1,]
 
 PrevalencePBV00T75 <- plot_ly( x=T0m$Time, y=T0m$TotalInfectiousPB ,name = '0 Months',mode = 'lines',type = 'scatter' ,showlegend = F) %>%
@@ -95,17 +95,17 @@ PrevalencePBV00T75 <- plot_ly( x=T0m$Time, y=T0m$TotalInfectiousPB ,name = '0 Mo
   )
 PrevalencePBV00T75
 
-T0m <- read_csv("data-07-07-2020/Treatment095/Tzero/Vaccine0/InfectiousPrevalencePB.csv")
+T0m <- read_csv("dados/data-02-02-2021/T095/it00m/v00/InfectiousPrevalencePB.csv")
 T0m <- T0m[-1,]
-T3m <- read_csv("data-07-07-2020/Treatment095/T3months/Vaccine0/InfectiousPrevalencePB.csv")
+T3m <- read_csv("dados/data-02-02-2021/T095/it03m/v00/InfectiousPrevalencePB.csv")
 T3m <- T3m[-1,]
-T6m <- read_csv("data-07-07-2020/Treatment095/T6months/Vaccine0/InfectiousPrevalencePB.csv")
+T6m <- read_csv("dados/data-02-02-2021/T095/it06m/v00/InfectiousPrevalencePB.csv")
 T6m <- T6m[-1,]
-T12m <- read_csv("data-07-07-2020/Treatment095/T1Year/Vaccine0/InfectiousPrevalencePB.csv")
+T12m <- read_csv("dados/data-02-02-2021/T095/it12m/v00/InfectiousPrevalencePB.csv")
 T12m <- T12m[-1,]
-T24m <- read_csv("data-07-07-2020/Treatment095/T2Years/Vaccine0/InfectiousPrevalencePB.csv")
+T24m <- read_csv("dados/data-02-02-2021/T095/it24m/v00/InfectiousPrevalencePB.csv")
 T24m <- T24m[-1,]
-T36m <- read_csv("data-07-07-2020/Treatment095/T3Years/Vaccine0/InfectiousPrevalencePB.csv")
+T36m <- read_csv("dados/data-02-02-2021/T095/it36m/v00/InfectiousPrevalencePB.csv")
 T36m <- T36m[-1,]
 
 PrevalencePBV00T95 <- plot_ly( x=T0m$Time, y=T0m$TotalInfectiousPB ,name = '0 Months',mode = 'lines',type = 'scatter',showlegend = F ) %>%
@@ -145,18 +145,18 @@ orca(Vaccine0,"leprosyPrevalencePBV0.png",width = 1200,height = 960,mathjax = T)
 #----------------------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------------------
 
-#LeprosyPrevalence Vaccine050 Treatment025
-T0m <- read_csv("data-07-07-2020/Treatment025/Tzero/Vaccine050/InfectiousPrevalencePB.csv")
+#LeprosyPrevalence Vaccine050 T025
+T0m <- read_csv("dados/data-02-02-2021/T025/it00m/v50/InfectiousPrevalencePB.csv")
 T0m <- T0m[-1,]
-T3m <- read_csv("data-07-07-2020/Treatment025/T3months/Vaccine050/InfectiousPrevalencePB.csv")
+T3m <- read_csv("dados/data-02-02-2021/T025/it03m/v50/InfectiousPrevalencePB.csv")
 T3m <- T3m[-1,]
-T6m <- read_csv("data-07-07-2020/Treatment025/T6months/Vaccine050/InfectiousPrevalencePB.csv")
+T6m <- read_csv("dados/data-02-02-2021/T025/it06m/v50/InfectiousPrevalencePB.csv")
 T6m <- T6m[-1,]
-T12m <- read_csv("data-07-07-2020/Treatment025/T1Year/Vaccine050/InfectiousPrevalencePB.csv")
+T12m <- read_csv("dados/data-02-02-2021/T025/it12m/v50/InfectiousPrevalencePB.csv")
 T12m <- T12m[-1,]
-T24m <- read_csv("data-07-07-2020/Treatment025/T2Years/Vaccine050/InfectiousPrevalencePB.csv")
+T24m <- read_csv("dados/data-02-02-2021/T025/it24m/v50/InfectiousPrevalencePB.csv")
 T24m <- T24m[-1,]
-T36m <- read_csv("data-07-07-2020/Treatment025/T3Years/Vaccine050/InfectiousPrevalencePB.csv")
+T36m <- read_csv("dados/data-02-02-2021/T025/it36m/v50/InfectiousPrevalencePB.csv")
 T36m <- T36m[-1,]
 
 PrevalencePBV50T25 <- plot_ly( x=T0m$Time, y=T0m$TotalInfectiousPB ,name = '0 Months',mode = 'lines',type = 'scatter',showlegend = T ) %>%
@@ -174,18 +174,18 @@ PrevalencePBV50T25 <- plot_ly( x=T0m$Time, y=T0m$TotalInfectiousPB ,name = '0 Mo
 PrevalencePBV50T25
 
 #-------------------------------------------------------------------------------------------------#
-#LeprosyPrevalence Vaccine050 Treatment050
-T0m <- read_csv("data-07-07-2020/Treatment050/Tzero/Vaccine050/InfectiousPrevalencePB.csv")
+#LeprosyPrevalence Vaccine050 T050
+T0m <- read_csv("dados/data-02-02-2021/T050/it00m/v50/InfectiousPrevalencePB.csv")
 T0m <- T0m[-1,]
-T3m <- read_csv("data-07-07-2020/Treatment050/T3months/Vaccine050/InfectiousPrevalencePB.csv")
+T3m <- read_csv("dados/data-02-02-2021/T050/it03m/v50/InfectiousPrevalencePB.csv")
 T3m <- T3m[-1,]
-T6m <- read_csv("data-07-07-2020/Treatment050/T6months/Vaccine050/InfectiousPrevalencePB.csv")
+T6m <- read_csv("dados/data-02-02-2021/T050/it06m/v50/InfectiousPrevalencePB.csv")
 T6m <- T6m[-1,]
-T12m <- read_csv("data-07-07-2020/Treatment050/T1Year/Vaccine050/InfectiousPrevalencePB.csv")
+T12m <- read_csv("dados/data-02-02-2021/T050/it12m/v50/InfectiousPrevalencePB.csv")
 T12m <- T12m[-1,]
-T24m <- read_csv("data-07-07-2020/Treatment050/T2Years/Vaccine050/InfectiousPrevalencePB.csv")
+T24m <- read_csv("dados/data-02-02-2021/T050/it24m/v50/InfectiousPrevalencePB.csv")
 T24m <- T24m[-1,]
-T36m <- read_csv("data-07-07-2020/Treatment050/T3Years/Vaccine050/InfectiousPrevalencePB.csv")
+T36m <- read_csv("dados/data-02-02-2021/T050/it36m/v50/InfectiousPrevalencePB.csv")
 T36m <- T36m[-1,]
 
 PrevalencePBV50T50 <- plot_ly( x=T0m$Time, y=T0m$TotalInfectiousPB ,name = '0 Months',mode = 'lines',type = 'scatter',showlegend = F ) %>%
@@ -204,18 +204,18 @@ PrevalencePBV50T50
 
 
 #-------------------------------------------------------------------------------------------------#
-#LeprosyPrevalence Vaccine050 Treatment075
-T0m <- read_csv("data-07-07-2020/Treatment075/Tzero/Vaccine050/InfectiousPrevalencePB.csv")
+#LeprosyPrevalence Vaccine050 T075
+T0m <- read_csv("dados/data-02-02-2021/T075/it00m/v50/InfectiousPrevalencePB.csv")
 T0m <- T0m[-1,]
-T3m <- read_csv("data-07-07-2020/Treatment075/T3months/Vaccine050/InfectiousPrevalencePB.csv")
+T3m <- read_csv("dados/data-02-02-2021/T075/it03m/v50/InfectiousPrevalencePB.csv")
 T3m <- T3m[-1,]
-T6m <- read_csv("data-07-07-2020/Treatment075/T6months/Vaccine050/InfectiousPrevalencePB.csv")
+T6m <- read_csv("dados/data-02-02-2021/T075/it06m/v50/InfectiousPrevalencePB.csv")
 T6m <- T6m[-1,]
-T12m <- read_csv("data-07-07-2020/Treatment075/T1Year/Vaccine050/InfectiousPrevalencePB.csv")
+T12m <- read_csv("dados/data-02-02-2021/T075/it12m/v50/InfectiousPrevalencePB.csv")
 T12m <- T12m[-1,]
-T24m <- read_csv("data-07-07-2020/Treatment075/T2Years/Vaccine050/InfectiousPrevalencePB.csv")
+T24m <- read_csv("dados/data-02-02-2021/T075/it24m/v50/InfectiousPrevalencePB.csv")
 T24m <- T24m[-1,]
-T36m <- read_csv("data-07-07-2020/Treatment075/T3Years/Vaccine050/InfectiousPrevalencePB.csv")
+T36m <- read_csv("dados/data-02-02-2021/T075/it36m/v50/InfectiousPrevalencePB.csv")
 T36m <- T36m[-1,]
 
 PrevalencePBV50T75 <- plot_ly( x=T0m$Time, y=T0m$TotalInfectiousPB ,name = '0 Months',mode = 'lines',type = 'scatter',showlegend = F ) %>%
@@ -234,18 +234,18 @@ PrevalencePBV50T75
 
 
 #-------------------------------------------------------------------------------------------------#
-#LeprosyPrevalence Vaccine050 Treatment095
-T0m <- read_csv("data-07-07-2020/Treatment095/Tzero/Vaccine050/InfectiousPrevalencePB.csv")
+#LeprosyPrevalence Vaccine050 T095
+T0m <- read_csv("dados/data-02-02-2021/T095/it00m/v50/InfectiousPrevalencePB.csv")
 T0m <- T0m[-1,]
-T3m <- read_csv("data-07-07-2020/Treatment095/T3months/Vaccine050/InfectiousPrevalencePB.csv")
+T3m <- read_csv("dados/data-02-02-2021/T095/it03m/v50/InfectiousPrevalencePB.csv")
 T3m <- T3m[-1,]
-T6m <- read_csv("data-07-07-2020/Treatment095/T6months/Vaccine050/InfectiousPrevalencePB.csv")
+T6m <- read_csv("dados/data-02-02-2021/T095/it06m/v50/InfectiousPrevalencePB.csv")
 T6m <- T6m[-1,]
-T12m <- read_csv("data-07-07-2020/Treatment095/T1Year/Vaccine050/InfectiousPrevalencePB.csv")
+T12m <- read_csv("dados/data-02-02-2021/T095/it12m/v50/InfectiousPrevalencePB.csv")
 T12m <- T12m[-1,]
-T24m <- read_csv("data-07-07-2020/Treatment095/T2Years/Vaccine050/InfectiousPrevalencePB.csv")
+T24m <- read_csv("dados/data-02-02-2021/T095/it24m/v50/InfectiousPrevalencePB.csv")
 T24m <- T24m[-1,]
-T36m <- read_csv("data-07-07-2020/Treatment095/T3Years/Vaccine050/InfectiousPrevalencePB.csv")
+T36m <- read_csv("dados/data-02-02-2021/T095/it36m/v50/InfectiousPrevalencePB.csv")
 T36m <- T36m[-1,]
 
 PrevalencePBV50T95 <- plot_ly( x=T0m$Time, y=T0m$TotalInfectiousPB ,name = '0 Months',mode = 'lines',type = 'scatter',showlegend = F ) %>%
@@ -285,18 +285,18 @@ orca(Vaccine50,"leprosyPrevalencePBV50.png",width = 1200,height = 960,mathjax = 
 #----------------------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------------------
 
-#LeprosyPrevalence Vaccine099 Treatment025
-T0m <- read_csv("data-07-07-2020/Treatment025/Tzero/Vaccine099/InfectiousPrevalencePB.csv")
+#LeprosyPrevalence Vaccine099 T025
+T0m <- read_csv("dados/data-02-02-2021/T025/it00m/v99/InfectiousPrevalencePB.csv")
 T0m <- T0m[-1,]
-T3m <- read_csv("data-07-07-2020/Treatment025/T3months/Vaccine099/InfectiousPrevalencePB.csv")
+T3m <- read_csv("dados/data-02-02-2021/T025/it03m/v99/InfectiousPrevalencePB.csv")
 T3m <- T3m[-1,]
-T6m <- read_csv("data-07-07-2020/Treatment025/T6months/Vaccine099/InfectiousPrevalencePB.csv")
+T6m <- read_csv("dados/data-02-02-2021/T025/it06m/v99/InfectiousPrevalencePB.csv")
 T6m <- T6m[-1,]
-T12m <- read_csv("data-07-07-2020/Treatment025/T1Year/Vaccine099/InfectiousPrevalencePB.csv")
+T12m <- read_csv("dados/data-02-02-2021/T025/it12m/v99/InfectiousPrevalencePB.csv")
 T12m <- T12m[-1,]
-T24m <- read_csv("data-07-07-2020/Treatment025/T2Years/Vaccine099/InfectiousPrevalencePB.csv")
+T24m <- read_csv("dados/data-02-02-2021/T025/it24m/v99/InfectiousPrevalencePB.csv")
 T24m <- T24m[-1,]
-T36m <- read_csv("data-07-07-2020/Treatment025/T3Years/Vaccine099/InfectiousPrevalencePB.csv")
+T36m <- read_csv("dados/data-02-02-2021/T025/it36m/v99/InfectiousPrevalencePB.csv")
 T36m <- T36m[-1,]
 
 PrevalencePBV99T25 <- plot_ly( x=T0m$Time, y=T0m$TotalInfectiousPB ,name = '0 Months',mode = 'lines',type = 'scatter',showlegend = T ) %>%
@@ -315,18 +315,18 @@ PrevalencePBV99T25
 
 
 #-------------------------------------------------------------------------------------------------#
-#LeprosyPrevalence Vaccine099 Treatment050
-T0m <- read_csv("data-07-07-2020/Treatment050/Tzero/Vaccine099/InfectiousPrevalencePB.csv")
+#LeprosyPrevalence Vaccine099 T050
+T0m <- read_csv("dados/data-02-02-2021/T050/it00m/v99/InfectiousPrevalencePB.csv")
 T0m <- T0m[-1,]
-T3m <- read_csv("data-07-07-2020/Treatment050/T3months/Vaccine099/InfectiousPrevalencePB.csv")
+T3m <- read_csv("dados/data-02-02-2021/T050/it03m/v99/InfectiousPrevalencePB.csv")
 T3m <- T3m[-1,]
-T6m <- read_csv("data-07-07-2020/Treatment050/T6months/Vaccine099/InfectiousPrevalencePB.csv")
+T6m <- read_csv("dados/data-02-02-2021/T050/it06m/v99/InfectiousPrevalencePB.csv")
 T6m <- T6m[-1,]
-T12m <- read_csv("data-07-07-2020/Treatment050/T1Year/Vaccine099/InfectiousPrevalencePB.csv")
+T12m <- read_csv("dados/data-02-02-2021/T050/it12m/v99/InfectiousPrevalencePB.csv")
 T12m <- T12m[-1,]
-T24m <- read_csv("data-07-07-2020/Treatment050/T2Years/Vaccine099/InfectiousPrevalencePB.csv")
+T24m <- read_csv("dados/data-02-02-2021/T050/it24m/v99/InfectiousPrevalencePB.csv")
 T24m <- T24m[-1,]
-T36m <- read_csv("data-07-07-2020/Treatment050/T3Years/Vaccine099/InfectiousPrevalencePB.csv")
+T36m <- read_csv("dados/data-02-02-2021/T050/it36m/v99/InfectiousPrevalencePB.csv")
 T36m <- T36m[-1,]
 
 PrevalencePBV99T50 <- plot_ly( x=T0m$Time, y=T0m$TotalInfectiousPB ,name = '0 Months',mode = 'lines',type = 'scatter',showlegend = F ) %>%
@@ -344,18 +344,18 @@ PrevalencePBV99T50 <- plot_ly( x=T0m$Time, y=T0m$TotalInfectiousPB ,name = '0 Mo
 PrevalencePBV99T50
 
 #-------------------------------------------------------------------------------------------------#
-#LeprosyPrevalence Vaccine099 Treatment075
-T0m <- read_csv("data-07-07-2020/Treatment075/Tzero/Vaccine099/InfectiousPrevalencePB.csv")
+#LeprosyPrevalence Vaccine099 T075
+T0m <- read_csv("dados/data-02-02-2021/T075/it00m/v99/InfectiousPrevalencePB.csv")
 T0m <- T0m[-1,]
-T3m <- read_csv("data-07-07-2020/Treatment075/T3months/Vaccine099/InfectiousPrevalencePB.csv")
+T3m <- read_csv("dados/data-02-02-2021/T075/it03m/v99/InfectiousPrevalencePB.csv")
 T3m <- T3m[-1,]
-T6m <- read_csv("data-07-07-2020/Treatment075/T6months/Vaccine099/InfectiousPrevalencePB.csv")
+T6m <- read_csv("dados/data-02-02-2021/T075/it06m/v99/InfectiousPrevalencePB.csv")
 T6m <- T6m[-1,]
-T12m <- read_csv("data-07-07-2020/Treatment075/T1Year/Vaccine099/InfectiousPrevalencePB.csv")
+T12m <- read_csv("dados/data-02-02-2021/T075/it12m/v99/InfectiousPrevalencePB.csv")
 T12m <- T12m[-1,]
-T24m <- read_csv("data-07-07-2020/Treatment075/T2Years/Vaccine099/InfectiousPrevalencePB.csv")
+T24m <- read_csv("dados/data-02-02-2021/T075/it24m/v99/InfectiousPrevalencePB.csv")
 T24m <- T24m[-1,]
-T36m <- read_csv("data-07-07-2020/Treatment075/T3Years/Vaccine099/InfectiousPrevalencePB.csv")
+T36m <- read_csv("dados/data-02-02-2021/T075/it36m/v99/InfectiousPrevalencePB.csv")
 T36m <- T36m[-1,]
 
 PrevalencePBV99T75 <- plot_ly( x=T0m$Time, y=T0m$TotalInfectiousPB ,name = '0 Months',mode = 'lines',type = 'scatter',showlegend = F ) %>%
@@ -373,18 +373,18 @@ PrevalencePBV99T75 <- plot_ly( x=T0m$Time, y=T0m$TotalInfectiousPB ,name = '0 Mo
 PrevalencePBV99T75
 
 #-------------------------------------------------------------------------------------------------#
-#LeprosyPrevalence Vaccine099 Treatment095
-T0m <- read_csv("data-07-07-2020/Treatment095/Tzero/Vaccine099/InfectiousPrevalencePB.csv")
+#LeprosyPrevalence Vaccine099 T095
+T0m <- read_csv("dados/data-02-02-2021/T095/it00m/v99/InfectiousPrevalencePB.csv")
 T0m <- T0m[-1,]
-T3m <- read_csv("data-07-07-2020/Treatment095/T3months/Vaccine099/InfectiousPrevalencePB.csv")
+T3m <- read_csv("dados/data-02-02-2021/T095/it03m/v99/InfectiousPrevalencePB.csv")
 T3m <- T3m[-1,]
-T6m <- read_csv("data-07-07-2020/Treatment095/T6months/Vaccine099/InfectiousPrevalencePB.csv")
+T6m <- read_csv("dados/data-02-02-2021/T095/it06m/v99/InfectiousPrevalencePB.csv")
 T6m <- T6m[-1,]
-T12m <- read_csv("data-07-07-2020/Treatment095/T1Year/Vaccine099/InfectiousPrevalencePB.csv")
+T12m <- read_csv("dados/data-02-02-2021/T095/it12m/v99/InfectiousPrevalencePB.csv")
 T12m <- T12m[-1,]
-T24m <- read_csv("data-07-07-2020/Treatment095/T2Years/Vaccine099/InfectiousPrevalencePB.csv")
+T24m <- read_csv("dados/data-02-02-2021/T095/it24m/v99/InfectiousPrevalencePB.csv")
 T24m <- T24m[-1,]
-T36m <- read_csv("data-07-07-2020/Treatment095/T3Years/Vaccine099/InfectiousPrevalencePB.csv")
+T36m <- read_csv("dados/data-02-02-2021/T095/it36m/v99/InfectiousPrevalencePB.csv")
 T36m <- T36m[-1,]
 
 PrevalencePBV99T95 <- plot_ly( x=T0m$Time, y=T0m$TotalInfectiousPB ,name = '0 Months',mode = 'lines',type = 'scatter',showlegend = F ) %>%

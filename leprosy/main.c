@@ -306,7 +306,7 @@ void main(int argc, char *argv[])
 	//printf("Atributo=%d\n",Infectious_P_Identified);
 	for(timesim=0;timesim<=MAXTIME;timesim++)  
 	{  
-	  	  ///printf("time=%i\n",timsim);
+	  	  printf("time=%i\n",timsim);
 	
 	  pbc(); // periodic boundary conditions
 	 
