@@ -61,29 +61,29 @@ class: inverse, center, middle
 ---
 ## Características 
 
-1. A Hanseníase é causada pelo bacilo *Mycobacterium Leprae* 
+-  A Hanseníase é causada pelo bacilo *Mycobacterium Leprae* 
 
-1. É uma doença crônica e progressiva
+-  É uma doença crônica e progressiva
 
-1. Foi conhecida durantes séculos como Lepra
+-  Foi conhecida durantes séculos como Lepra
 
-1. É dividida em casos Paucibacilares e Multibacilares
+-  É dividida em casos Paucibacilares e Multibacilares
 
-1. É transmitida por meio de gotículas de saliva eliminadas na fala, tosse ou espirro, de pessoas não tratadas
+-  É transmitida por meio de gotículas de saliva eliminadas na fala, tosse ou espirro, de pessoas não tratadas
 
-1. Indivíduos em tratamento deixam de transmitir a doença
+-  Indivíduos em tratamento deixam de transmitir a doença
 
 ---
 ## Sintomas
 
-1. Lesões de pele, geralmente, tem uma pigmentação diferente da pele, podendo também ter aspectos achatados, elevados ou nodulos 
+-  Lesões de pele, geralmente, tem uma pigmentação diferente da pele, podendo também ter aspectos achatados, elevados ou nodulos 
 
-1. Os sintomas podem ocorrer dentro de 1 ano após o contágio
+-  Os sintomas podem ocorrer dentro de 1 ano após o contágio
 
-1. Alguns casos podem levar até 20 anos para os sintomas aparecer
+-  Alguns casos podem levar até 20 anos para os sintomas aparecer
 
 
-```{r out.width = "60%",echo=FALSE,fig.align='center',fig.cap='Figura 1: Progressão da Hanseíase em uma pessoa. Fonte: Biblioteca Virtual em saúde'}
+```{r imagemMenino, out.width = "60%",echo=FALSE,fig.align='center',fig.cap='Figura 1: Progressão da Hanseíase em uma pessoa. Fonte: Biblioteca Virtual em saúde'}
 include_graphics("Docs/hanseniase.jpg")
 ```
 
@@ -93,4 +93,44 @@ A pigmentação pode variar de uma pigmentação mais clara que a pele, até uma
 ---
 ## Estigmas Sociais
 
-sei la sei la
+- Até a década de 1940 a hanseníase era dada como incurável
+
+- Os portadores da Hanseníase torvavam-se desfigurados e/ou tinham deficiências significativas
+
+- Os portadores da Hanseníase muitas vezes eram temidos pelo resto da sociedade, e por isso eram isolados e segregados do restante da população
+
+- O estigma social em torno da hanseníase tem um alto impacto psicológico nas suas vítimas
+
+---
+## Tratamento e Prevenção
+
+- A prevenção da Hanseníase se da na maior parte das vezes pela vacina BCG
+
+- O tratamento é feito usando um coquetel de antibióticos adiministrado mensalmente de pelo tempo de tratamento
+
+```{r out.width = "90%",echo=FALSE,fig.align='center',fig.cap='Figura 2: Cartela de antibióticos usadas no tratamento da hanseníase MB e PB respectivamente. Fonte: Guia para o Controle da Hanseníase'}
+include_graphics("Docs/cartela.png")
+```
+???
+São 6 aplicações mensais do coquetel para o caso PB
+e 12 aplicações mensais do coquetel para o caso MB
+---
+## Cenário Epidemiológico
+
+- No ano 2000, a OMS publicou o *Guide to Eliminate Leprosy as a Public Health Problem*<sup>1</sup>
+
+- Meta estipulada, de que, a prevalência da doença deveria ser menor que 1/10.000 habitantes, para que a hanseníase deixasse de ser um problema de saúde pública 
+
+- Vários países, incluindo o Brasil, por diversas razões, não conseguiram cumprir essa meta
+
+- Em 2019, foram reportados à OMS 202.185 casos novos da doença no mundo
+
+- Em 2019, foram notificados 27.864 casos no Brasil
+
+- Em 2018, a Região Norte foi responsavel por 31,95% dos novos casos de Hanseníase no Brasil, atrás apenas da Região Centro-Oeste com 41,29%
+<span class="footnote"><sup>1</sup> Guia para Eliminar a Hanseníase como Problema de Saúde Pública - em tradução livre</span>
+
+---
+class: inverse, center, middle
+
+# Modelos Epidemiológicos Matemáticos
