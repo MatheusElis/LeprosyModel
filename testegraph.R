@@ -8,8 +8,8 @@ T12m <- read_csv("dados/data-02-02-2021/T095/it12m/v50/InfectiousIncidence.csv")
 T12m <- T12m[-1,]
 T24m <- read_csv("dados/data-02-02-2021/T095/it24m/v50/InfectiousIncidence.csv")
 T24m <- T24m[-1,]
-NT36m <- read_csv("dados/data-02-02-2021/T095/it36m/v50/InfectiousIncidence.csv")
-NT36m <- T36m[-seq(1,51),]
+T36m <- read_csv("dados/data-02-02-2021/T095/it36m/v50/InfectiousIncidence.csv")
+T36m <- T36m[-seq(1,51),]
 seq(1,51)
 IncidenceV50T75 <- plot_ly( x=T36m$Time, y=T36m$NewLatent ,name = 'New Latent',mode = 'lines',type = 'scatter' ) %>%
   add_trace(y= T36m$NewLatent, name = 'New Latent', type = 'bar') %>%
@@ -90,3 +90,7 @@ prevale <- plot_ly( x=T0m$Time, y=T0m$TotalInfectious ,name = 'Prevalência Hans
   )
 prevale
 orca(prevale,"testeprevalencia.pdf",width = 1200,height = 960)
+
+
+p <- plot_ly(economics, x = ~date, y = ~unemploy / pop)
+p

@@ -5,7 +5,7 @@ library(readr)
 library(processx)
 g <- list(
   family = "Courier New, monospace",
-  size = 24,
+  size = 21,
   color = "#000000"
 )
 f <- list(
@@ -162,7 +162,7 @@ PrevalenceV00T95 <- plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 M
                         y0 = 0, y1 = 1, yref = "y")
   )
 PrevalenceV00T95
-
+api_create(PrevalenceV00T95, filename = "r-docs-prevalence")
 orca(PrevalenceV00T95,"imagenstcc/leprosyPrevalence/who/leprosyPrevalenceV00T95.pdf")
 #orca(PrevalenceV00T95,"imagenstcc/leprosyPrevalence/who/leprosyPrevalenceV00T95.svg")
 #orca(PrevalenceV00T95,"imagenstcc/leprosyPrevalence/who/leprosyPrevalenceV00T95.png")
@@ -487,19 +487,64 @@ prev <- prev[-seq(1,50),]
 ince <- read_csv("dados/data-02-02-2021/T095/it03m/v50/InfectiousIncidence.csv")
 ince <- ince[-seq(1,50),]
 
-fig <- plot_ly(x=prev$Time, y=prev$TotalInfectious ,name = 'Individuos Infecciosos',mode = 'lines',type = 'scatter',width = 1200,height = 960 ) %>%
+fig <- plot_ly(x=prev$Time, y=prev$TotalInfectious ,name = 'Individuos Infecciosos',mode = 'lines',type = 'scatter',width = 900,height = 800 ) %>%
+  add_trace(y= ince$NewInfectious, name = 'Novos Infecciosos', type = 'bar',marker = list(color = 'rgb(158,202,225)',width = 0.1)) %>%
+  #add_trace(y= ince$NewRecoveredLatent, name = 'Novos Recuperados', type = 'bar') %>%
   add_trace(y= prev$Latent, name = 'Individuos Latente', mode = 'lines') %>%
   add_trace(y= prev$InfectiousUnderTreatmean, name = 'Individuos em Tratamento', mode = 'lines') %>%
-  add_trace(y= prev$RecoveredLatent, name = 'Individuos em Recuperado', mode = 'lines') %>%
+  add_trace(y= prev$RecoveredLatent, name = 'Individuos Recuperado', mode = 'lines') %>%
   layout( colorway = c('#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b'),        margin = m,
-          legend = list( title=list(text='<b> Tempo de Identificacao </b>'),bgcolor="#E2E2E2"),
-          title = list(text = '<b>Hanseniase Prevalencia - Imunidade BCG 0.99, Probabilidade de Tratamento 95% </b>',font = g),
+          legend = list(x=0.8,y=0.95, title=list(text='<b> Estagio do Individuo </b>'),bgcolor="#E2E2E2",font = 17),
+          title = list(text = '<b>Hanseniase - Imunidade BCG 0.50, Probabilidade de Tratamento 95% </b>',font = g),
           xaxis = list(range = c(50, 300),title = 'Tempo (Anos)',dtick = 10,   titlefont = f),
-          yaxis = list(title = 'Numero de individuos infecciosos por 10000 individuos',dtick = 50,  titlefont = f),
+          yaxis = list(range = c(0, 1400),title = 'Numero de individuos',dtick = 50,  titlefont = f),
           shapes = list(type = "rect",
                         fillcolor = "blue", line = list(color = "blue"), opacity = 0.2,
                         x0 = 50, x1 = 300, xref = "x",
                         y0 = 0, y1 = 1, yref = "y")
   )
 fig  
-  
+orca(fig,"imagenstcc/leprosyPrevalence/who/geral2v50t95.pdf")
+
+prev <- read_csv("dados/data-02-02-2021/T095/it03m/v50/InfectiousPrevalence.csv")
+prev <- prev[-seq(1,50),]
+prevPB<- read_csv("dados/data-02-02-2021/T095/it03m/v50/InfectiousPrevalencePB.csv")
+prevPB <- prevPB[-seq(1,50),]
+prevMB <- read_csv("dados/data-02-02-2021/T095/it03m/v50/InfectiousPrevalenceMB.csv")
+prevMB <- prevMB[-seq(1,50),]
+
+
+ince <- read_csv("dados/data-02-02-2021/T095/it03m/v50/InfectiousIncidence.csv")
+ince <- ince[-seq(1,50),]
+incePB <- read_csv("dados/data-02-02-2021/T095/it03m/v50/InfectiousIncidencePB.csv")
+incePB <- incePB[-seq(1,50),]
+inceMB <- read_csv("dados/data-02-02-2021/T095/it03m/v50/InfectiousIncidenceMB.csv")
+inceMB <- inceMB[-seq(1,50),]
+
+fig1 <- plot_ly(x=prev$Time, y=prevPB$TotalInfectiousPB ,name = 'Individuos Infecciosos PB',mode = 'lines', legendgroup = 'group1',type = 'scatter',width = 900,height = 800 ) %>%
+  add_trace(y= incePB$NewInfectiousPB, name = 'Novos Infecciosos PB', type = 'bar', legendgroup = 'group1',marker = list(width = 0.1)) %>%
+  add_trace(y= prevPB$LatentPB, name = 'Individuos Latente PB', legendgroup = 'group1', mode = 'lines') %>%
+  add_trace(y= prevPB$InfectiousUnderTreatmeanPB, name = 'Individuos PB em Tratamento', legendgroup = 'group1', mode = 'lines') %>%
+  add_trace(y= prevPB$RecoveredLatentPB, name = 'Individuos PB Recuperado', legendgroup = 'group1', mode = 'lines') %>%
+  layout( colorway = c('#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd','#ba5de1','#9ecaff','#6c91b8',   '#ff7f0e', '#f3cec9'),        margin = m,
+          legend = list(x=0.8,y=0.95, title=list(text='<b> Estagio do Individuo </b>'),bgcolor="#E2E2E2",font = 17),
+          title = list(text = '<b>Hanseniase PB - Imunidade BCG 0.50, Probabilidade de Tratamento 95% </b>',font = g),
+          xaxis = list(range = c(50, 300),title = 'Tempo (Anos)',dtick = 20,   titlefont = f),
+          yaxis = list(range = c(0, 850),title = 'Numero de individuos',dtick = 100,  titlefont = f)
+  )
+fig1  
+
+fig2 <- plot_ly(x=prev$Time, y=prevMB$TotalInfectiousMB ,name = 'Individuos Infecciosos MB',mode = 'lines', legendgroup = 'group2',type = 'scatter',width = 900,height = 800 ) %>%
+  add_trace(y= inceMB$NewInfectiousMB, name = 'Novos Infecciosos MB', type = 'bar', legendgroup = 'group2',marker = list(width = 0.1)) %>%
+  add_trace(y= prevMB$LatentMB, name = 'Individuos Latente MB', legendgroup = 'group2', mode = 'lines') %>%
+  add_trace(y= prevMB$InfectiousUnderTreatmeanMB, name = 'Individuos MB em Tratamento', legendgroup = 'group2', mode = 'lines') %>%
+  add_trace(y= prevMB$RecoveredLatentMB, name = 'Individuos MB Recuperado', legendgroup = 'group2', mode = 'lines') %>%
+  layout( colorway = c('#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd','#ba5de1','#9ecaff','#6c91b8',   '#ff7f0e', '#f3cec9'),        margin = m,
+          legend = list(x=0.8,y=0.95, title=list(text='<b> Estagio do Individuo </b>'),bgcolor="#E2E2E2",font = 17),
+          title = list(text = '<b>Hanseniase  - Imunidade BCG 0.50, Probabilidade de Tratamento 95% </b>',font = g),
+          xaxis = list(range = c(50, 300),title = 'Tempo (Anos)',dtick = 20,   titlefont = f),
+          yaxis = list(range = c(0, 600),title = 'Numero de individuos',dtick = 100,  titlefont = f)
+  )
+fig2 
+fig3 <- subplot(fig1,fig2,margin = 0.03, nrows = 2)
+orca(fig3,"imagenstcc/leprosyPrevalence/who/pbmb.pdf")

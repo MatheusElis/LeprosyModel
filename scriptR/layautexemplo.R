@@ -138,7 +138,7 @@ PrevalenceV00T95
 
 fig <- subplot(PrevalenceV00T25,PrevalenceV00T50,PrevalenceV00T75,PrevalenceV00T95,margin = 0.1,nrows = 2,titleY = T,titleX = T,shareY = F,shareX = F)
 fig %>% layout(annotations = list(
-  list(x = 0.005 , y = 1.05, text = "<b>Leprosy Prevalence - Immunity Vaccine 0,Treatment 25%</b>", showarrow = F, xref='paper', yref='paper',xanchor = 'left'),
+  list(x = 0.005 , y = 1.05, text = "<b>Leprosy Prevalence - Immunity Vaccine 0,Treatment 25%</b>", showarrow = F, xanchor = 'left'),
   list(x = 0.605 , y = 0.45, text = "<b>Leprosy Prevalence - Immunity Vaccine 0,Treatment 95%</b>", showarrow = F, xref='paper', yref='paper',xanchor = 'left'),
   list(x = 0.005 , y = 0.45, text = "<b>Leprosy Prevalence - Immunity Vaccine 0,Treatment 75%</b>", showarrow = F, xref='paper', yref='paper',xanchor = 'left'),
   list(x = 0.605 , y = 1.05, text = "<b>Leprosy Prevalence - Immunity Vaccine 0,Treatment 50%</b>", showarrow = F, xref='paper', yref='paper',xanchor = 'left'))
