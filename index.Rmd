@@ -59,7 +59,7 @@ class: inverse, center, middle
 # Hanseníase
 
 ---
-## Caracteristicas 
+## Características 
 
 1. A Hanseníase é causada pelo bacilo *Mycobacterium Leprae* 
 
