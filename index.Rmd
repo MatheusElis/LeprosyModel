@@ -84,7 +84,7 @@ class: inverse, center, middle
 
 
 ```{r out.width = "60%",echo=FALSE,fig.align='center',fig.cap='Figura 1: Progressão da Hanseíase em uma pessoa. Fonte: Biblioteca Virtual em saúde'}
-include_graphics("exe.jpg")
+include_graphics("Docs/hanseniase.jpg")
 ```
 
 ???
