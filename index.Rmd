@@ -83,7 +83,7 @@ class: inverse, center, middle
 -  Alguns casos podem levar até 20 anos para os sintomas aparecer.
 
 
-```{r imagemMenino, out.width = "60%",echo=FALSE,fig.align='center'}
+```{r imagemMenino, out.width = "65%",echo=FALSE,fig.align='center'}
 include_graphics("Docs/Hans.jpg")
 ```
 
