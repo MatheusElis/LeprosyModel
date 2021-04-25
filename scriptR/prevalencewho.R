@@ -24,17 +24,17 @@ div <- 10.0489
 
 #LeprosyPrevalence Vaccine0 T025
 T0m <- read_csv("dados/data-02-02-2021/T025/it00m/v00/InfectiousPrevalence.csv")
-T0m <- T0m[-seq(1,50),]
+T0m <- T0m[-1,]
 T3m <- read_csv("dados/data-02-02-2021/T025/it03m/v00/InfectiousPrevalence.csv")
-T3m <- T3m[-seq(1,50),]
+T3m <- T3m[-1,]
 T6m <- read_csv("dados/data-02-02-2021/T025/it06m/v00/InfectiousPrevalence.csv")
-T6m <- T6m[-seq(1,50),]
+T6m <- T6m[-1,]
 T12m <- read_csv("dados/data-02-02-2021/T025/it12m/v00/InfectiousPrevalence.csv")
-T12m <- T12m[-seq(1,50),]
+T12m <- T12m[-1,]
 T24m <- read_csv("dados/data-02-02-2021/T025/it24m/v00/InfectiousPrevalence.csv")
-T24m <- T24m[-seq(1,50),]
+T24m <- T24m[-1,]
 T36m <- read_csv("dados/data-02-02-2021/T025/it36m/v00/InfectiousPrevalence.csv")
-T36m <- T36m[-seq(1,50),]
+T36m <- T36m[-1,]
 
 PrevalenceV00T25 <- plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 1200,height = 960 ) %>%
   add_trace(y= T3m$ TotalInfectious/div, name = '3 Meses', mode = 'lines') %>%
@@ -60,17 +60,17 @@ orca(PrevalenceV00T25,"imagenstcc/leprosyPrevalence/who/leprosyPrevalenceV00T25.
 #-------------------------------------------------------------------------------------------------#
 #LeprosyPrevalence Vaccine0 T050
 T0m <- read_csv("dados/data-02-02-2021/T050/it00m/v00/InfectiousPrevalence.csv")
-T0m <- T0m[-seq(1,50),]
+T0m <- T0m[-1,]
 T3m <- read_csv("dados/data-02-02-2021/T050/it03m/v00/InfectiousPrevalence.csv")
-T3m <- T3m[-seq(1,50),]
+T3m <- T3m[-1,]
 T6m <- read_csv("dados/data-02-02-2021/T050/it06m/v00/InfectiousPrevalence.csv")
-T6m <- T6m[-seq(1,50),]
+T6m <- T6m[-1,]
 T12m <- read_csv("dados/data-02-02-2021/T050/it12m/v00/InfectiousPrevalence.csv")
-T12m <- T12m[-seq(1,50),]
+T12m <- T12m[-1,]
 T24m <- read_csv("dados/data-02-02-2021/T050/it24m/v00/InfectiousPrevalence.csv")
-T24m <- T24m[-seq(1,50),]
+T24m <- T24m[-1,]
 T36m <- read_csv("dados/data-02-02-2021/T050/it36m/v00/InfectiousPrevalence.csv")
-T36m <- T36m[-seq(1,50),]
+T36m <- T36m[-1,]
 
 PrevalenceV00T50 <- plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 1200,height = 960 ) %>%
   add_trace(y= T3m$ TotalInfectious/div, name = '3 Meses', mode = 'lines') %>%
@@ -96,17 +96,17 @@ orca(PrevalenceV00T50,"imagenstcc/leprosyPrevalence/who/leprosyPrevalenceV00T50.
 #-------------------------------------------------------------------------------------------------#
 #LeprosyPrevalence Vaccine0 T075
 T0m <- read_csv("dados/data-02-02-2021/T075/it00m/v00/InfectiousPrevalence.csv")
-T0m <- T0m[-seq(1,50),]
+T0m <- T0m[-1,]
 T3m <- read_csv("dados/data-02-02-2021/T075/it03m/v00/InfectiousPrevalence.csv")
-T3m <- T3m[-seq(1,50),]
+T3m <- T3m[-1,]
 T6m <- read_csv("dados/data-02-02-2021/T075/it06m/v00/InfectiousPrevalence.csv")
-T6m <- T6m[-seq(1,50),]
+T6m <- T6m[-1,]
 T12m <- read_csv("dados/data-02-02-2021/T075/it12m/v00/InfectiousPrevalence.csv")
-T12m <- T12m[-seq(1,50),]
+T12m <- T12m[-1,]
 T24m <- read_csv("dados/data-02-02-2021/T075/it24m/v00/InfectiousPrevalence.csv")
-T24m <- T24m[-seq(1,50),]
+T24m <- T24m[-1,]
 T36m <- read_csv("dados/data-02-02-2021/T075/it36m/v00/InfectiousPrevalence.csv")
-T36m <- T36m[-seq(1,50),]
+T36m <- T36m[-1,]
 
 PrevalenceV00T75 <- plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 1200,height = 960 ) %>%
   add_trace(y= T3m$ TotalInfectious/div, name = '3 Meses', mode = 'lines') %>%
@@ -133,17 +133,17 @@ orca(PrevalenceV00T75,"imagenstcc/leprosyPrevalence/who/leprosyPrevalenceV00T75.
 #-------------------------------------------------------------------------------------------------#
 #LeprosyPrevalence Vaccine0 T095
 T0m <- read_csv("dados/data-02-02-2021/T095/it00m/v00/InfectiousPrevalence.csv")
-T0m <- T0m[-seq(1,50),]
+T0m <- T0m[-1,]
 T3m <- read_csv("dados/data-02-02-2021/T095/it03m/v00/InfectiousPrevalence.csv")
-T3m <- T3m[-seq(1,50),]
+T3m <- T3m[-1,]
 T6m <- read_csv("dados/data-02-02-2021/T095/it06m/v00/InfectiousPrevalence.csv")
-T6m <- T6m[-seq(1,50),]
+T6m <- T6m[-1,]
 T12m <- read_csv("dados/data-02-02-2021/T095/it12m/v00/InfectiousPrevalence.csv")
-T12m <- T12m[-seq(1,50),]
+T12m <- T12m[-1,]
 T24m <- read_csv("dados/data-02-02-2021/T095/it24m/v00/InfectiousPrevalence.csv")
-T24m <- T24m[-seq(1,50),]
+T24m <- T24m[-1,]
 T36m <- read_csv("dados/data-02-02-2021/T095/it36m/v00/InfectiousPrevalence.csv")
-T36m <- T36m[-seq(1,50),]
+T36m <- T36m[-1,]
 
 PrevalenceV00T95 <- plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 1200,height = 960 ) %>%
   add_trace(y= T3m$ TotalInfectious/div, name = '3 Meses', mode = 'lines') %>%
@@ -172,17 +172,17 @@ orca(PrevalenceV00T95,"imagenstcc/leprosyPrevalence/who/leprosyPrevalenceV00T95.
 
 #LeprosyPrevalence Vaccine050 T025
 T0m <- read_csv("dados/data-02-02-2021/T025/it00m/v50/InfectiousPrevalence.csv")
-T0m <- T0m[-seq(1,50),]
+T0m <- T0m[-1,]
 T3m <- read_csv("dados/data-02-02-2021/T025/it03m/v50/InfectiousPrevalence.csv")
-T3m <- T3m[-seq(1,50),]
+T3m <- T3m[-1,]
 T6m <- read_csv("dados/data-02-02-2021/T025/it06m/v50/InfectiousPrevalence.csv")
-T6m <- T6m[-seq(1,50),]
+T6m <- T6m[-1,]
 T12m <- read_csv("dados/data-02-02-2021/T025/it12m/v50/InfectiousPrevalence.csv")
-T12m <- T12m[-seq(1,50),]
+T12m <- T12m[-1,]
 T24m <- read_csv("dados/data-02-02-2021/T025/it24m/v50/InfectiousPrevalence.csv")
-T24m <- T24m[-seq(1,50),]
+T24m <- T24m[-1,]
 T36m <- read_csv("dados/data-02-02-2021/T025/it36m/v50/InfectiousPrevalence.csv")
-T36m <- T36m[-seq(1,50),]
+T36m <- T36m[-1,]
 
 PrevalenceV50T25 <- plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 1200,height = 960 ) %>%
   add_trace(y= T3m$ TotalInfectious/div, name = '3 Meses', mode = 'lines') %>%
@@ -208,17 +208,17 @@ orca(PrevalenceV50T25,"imagenstcc/leprosyPrevalence/who/leprosyPrevalenceV50T25.
 #-------------------------------------------------------------------------------------------------#
 #LeprosyPrevalence Vaccine050 T050
 T0m <- read_csv("dados/data-02-02-2021/T050/it00m/v50/InfectiousPrevalence.csv")
-T0m <- T0m[-seq(1,50),]
+T0m <- T0m[-1,]
 T3m <- read_csv("dados/data-02-02-2021/T050/it03m/v50/InfectiousPrevalence.csv")
-T3m <- T3m[-seq(1,50),]
+T3m <- T3m[-1,]
 T6m <- read_csv("dados/data-02-02-2021/T050/it06m/v50/InfectiousPrevalence.csv")
-T6m <- T6m[-seq(1,50),]
+T6m <- T6m[-1,]
 T12m <- read_csv("dados/data-02-02-2021/T050/it12m/v50/InfectiousPrevalence.csv")
-T12m <- T12m[-seq(1,50),]
+T12m <- T12m[-1,]
 T24m <- read_csv("dados/data-02-02-2021/T050/it24m/v50/InfectiousPrevalence.csv")
-T24m <- T24m[-seq(1,50),]
+T24m <- T24m[-1,]
 T36m <- read_csv("dados/data-02-02-2021/T050/it36m/v50/InfectiousPrevalence.csv")
-T36m <- T36m[-seq(1,50),]
+T36m <- T36m[-1,]
 
 PrevalenceV50T50 <- plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 1200,height = 960 ) %>%
   add_trace(y= T3m$ TotalInfectious/div, name = '3 Meses', mode = 'lines') %>%
@@ -245,17 +245,17 @@ orca(PrevalenceV50T50,"imagenstcc/leprosyPrevalence/who/leprosyPrevalenceV50T50.
 #-------------------------------------------------------------------------------------------------#
 #LeprosyPrevalence Vaccine050 T075
 T0m <- read_csv("dados/data-02-02-2021/T075/it00m/v50/InfectiousPrevalence.csv")
-T0m <- T0m[-seq(1,50),]
+T0m <- T0m[-1,]
 T3m <- read_csv("dados/data-02-02-2021/T075/it03m/v50/InfectiousPrevalence.csv")
-T3m <- T3m[-seq(1,50),]
+T3m <- T3m[-1,]
 T6m <- read_csv("dados/data-02-02-2021/T075/it06m/v50/InfectiousPrevalence.csv")
-T6m <- T6m[-seq(1,50),]
+T6m <- T6m[-1,]
 T12m <- read_csv("dados/data-02-02-2021/T075/it12m/v50/InfectiousPrevalence.csv")
-T12m <- T12m[-seq(1,50),]
+T12m <- T12m[-1,]
 T24m <- read_csv("dados/data-02-02-2021/T075/it24m/v50/InfectiousPrevalence.csv")
-T24m <- T24m[-seq(1,50),]
+T24m <- T24m[-1,]
 T36m <- read_csv("dados/data-02-02-2021/T075/it36m/v50/InfectiousPrevalence.csv")
-T36m <- T36m[-seq(1,50),]
+T36m <- T36m[-1,]
 
 PrevalenceV50T75 <- plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 1200,height = 960 ) %>%
   add_trace(y= T3m$ TotalInfectious/div, name = '3 Meses', mode = 'lines') %>%
@@ -282,17 +282,17 @@ orca(PrevalenceV50T75,"imagenstcc/leprosyPrevalence/who/leprosyPrevalenceV50T75.
 #-------------------------------------------------------------------------------------------------#
 #LeprosyPrevalence Vaccine050 T095
 T0m <- read_csv("dados/data-02-02-2021/T095/it00m/v50/InfectiousPrevalence.csv")
-T0m <- T0m[-seq(1,50),]
+T0m <- T0m[-1,]
 T3m <- read_csv("dados/data-02-02-2021/T095/it03m/v50/InfectiousPrevalence.csv")
-T3m <- T3m[-seq(1,50),]
+T3m <- T3m[-1,]
 T6m <- read_csv("dados/data-02-02-2021/T095/it06m/v50/InfectiousPrevalence.csv")
-T6m <- T6m[-seq(1,50),]
+T6m <- T6m[-1,]
 T12m <- read_csv("dados/data-02-02-2021/T095/it12m/v50/InfectiousPrevalence.csv")
-T12m <- T12m[-seq(1,50),]
+T12m <- T12m[-1,]
 T24m <- read_csv("dados/data-02-02-2021/T095/it24m/v50/InfectiousPrevalence.csv")
-T24m <- T24m[-seq(1,50),]
+T24m <- T24m[-1,]
 T36m <- read_csv("dados/data-02-02-2021/T095/it36m/v50/InfectiousPrevalence.csv")
-T36m <- T36m[-seq(1,50),]
+T36m <- T36m[-1,]
 
 PrevalenceV50T95 <- plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 1200,height = 960 ) %>%
   add_trace(y= T3m$ TotalInfectious/div, name = '3 Meses', mode = 'lines') %>%
@@ -322,17 +322,17 @@ orca(PrevalenceV50T95,"imagenstcc/leprosyPrevalence/who/leprosyPrevalenceV50T95.
 
 #LeprosyPrevalence Vaccine099 T025
 T0m <- read_csv("dados/data-02-02-2021/T025/it00m/v99/InfectiousPrevalence.csv")
-T0m <- T0m[-seq(1,50),]
+T0m <- T0m[-1,]
 T3m <- read_csv("dados/data-02-02-2021/T025/it03m/v99/InfectiousPrevalence.csv")
-T3m <- T3m[-seq(1,50),]
+T3m <- T3m[-1,]
 T6m <- read_csv("dados/data-02-02-2021/T025/it06m/v99/InfectiousPrevalence.csv")
-T6m <- T6m[-seq(1,50),]
+T6m <- T6m[-1,]
 T12m <- read_csv("dados/data-02-02-2021/T025/it12m/v99/InfectiousPrevalence.csv")
-T12m <- T12m[-seq(1,50),]
+T12m <- T12m[-1,]
 T24m <- read_csv("dados/data-02-02-2021/T025/it24m/v99/InfectiousPrevalence.csv")
-T24m <- T24m[-seq(1,50),]
+T24m <- T24m[-1,]
 T36m <- read_csv("dados/data-02-02-2021/T025/it36m/v99/InfectiousPrevalence.csv")
-T36m <- T36m[-seq(1,50),]
+T36m <- T36m[-1,]
 
 PrevalenceV99T25 <- plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 1200,height = 960 ) %>%
   add_trace(y= T3m$ TotalInfectious/div, name = '3 Meses', mode = 'lines') %>%
@@ -359,17 +359,17 @@ orca(PrevalenceV99T25,"imagenstcc/leprosyPrevalence/who/leprosyPrevalenceV99T25.
 #-------------------------------------------------------------------------------------------------#
 #LeprosyPrevalence Vaccine099 T050
 T0m <- read_csv("dados/data-02-02-2021/T050/it00m/v99/InfectiousPrevalence.csv")
-T0m <- T0m[-seq(1,50),]
+T0m <- T0m[-1,]
 T3m <- read_csv("dados/data-02-02-2021/T050/it03m/v99/InfectiousPrevalence.csv")
-T3m <- T3m[-seq(1,50),]
+T3m <- T3m[-1,]
 T6m <- read_csv("dados/data-02-02-2021/T050/it06m/v99/InfectiousPrevalence.csv")
-T6m <- T6m[-seq(1,50),]
+T6m <- T6m[-1,]
 T12m <- read_csv("dados/data-02-02-2021/T050/it12m/v99/InfectiousPrevalence.csv")
-T12m <- T12m[-seq(1,50),]
+T12m <- T12m[-1,]
 T24m <- read_csv("dados/data-02-02-2021/T050/it24m/v99/InfectiousPrevalence.csv")
-T24m <- T24m[-seq(1,50),]
+T24m <- T24m[-1,]
 T36m <- read_csv("dados/data-02-02-2021/T050/it36m/v99/InfectiousPrevalence.csv")
-T36m <- T36m[-seq(1,50),]
+T36m <- T36m[-1,]
 
 PrevalenceV99T50 <- plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 1200,height = 960 ) %>%
   add_trace(y= T3m$ TotalInfectious/div, name = '3 Meses', mode = 'lines') %>%
@@ -395,17 +395,17 @@ orca(PrevalenceV99T50,"imagenstcc/leprosyPrevalence/who/leprosyPrevalenceV99T50.
 #-------------------------------------------------------------------------------------------------#
 #LeprosyPrevalence Vaccine099 T075
 T0m <- read_csv("dados/data-02-02-2021/T075/it00m/v99/InfectiousPrevalence.csv")
-T0m <- T0m[-seq(1,50),]
+T0m <- T0m[-1,]
 T3m <- read_csv("dados/data-02-02-2021/T075/it03m/v99/InfectiousPrevalence.csv")
-T3m <- T3m[-seq(1,50),]
+T3m <- T3m[-1,]
 T6m <- read_csv("dados/data-02-02-2021/T075/it06m/v99/InfectiousPrevalence.csv")
-T6m <- T6m[-seq(1,50),]
+T6m <- T6m[-1,]
 T12m <- read_csv("dados/data-02-02-2021/T075/it12m/v99/InfectiousPrevalence.csv")
-T12m <- T12m[-seq(1,50),]
+T12m <- T12m[-1,]
 T24m <- read_csv("dados/data-02-02-2021/T075/it24m/v99/InfectiousPrevalence.csv")
-T24m <- T24m[-seq(1,50),]
+T24m <- T24m[-1,]
 T36m <- read_csv("dados/data-02-02-2021/T075/it36m/v99/InfectiousPrevalence.csv")
-T36m <- T36m[-seq(1,50),]
+T36m <- T36m[-1,]
 
 PrevalenceV99T75 <- plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 1200,height = 960 ) %>%
   add_trace(y= T3m$ TotalInfectious/div, name = '3 Meses', mode = 'lines') %>%
@@ -431,17 +431,17 @@ orca(PrevalenceV99T75,"imagenstcc/leprosyPrevalence/who/leprosyPrevalenceV99T75.
 #-------------------------------------------------------------------------------------------------#
 #LeprosyPrevalence Vaccine099 T095
 T0m <- read_csv("dados/data-02-02-2021/T095/it00m/v99/InfectiousPrevalence.csv")
-T0m <- T0m[-seq(1,50),]
+T0m <- T0m[-1,]
 T3m <- read_csv("dados/data-02-02-2021/T095/it03m/v99/InfectiousPrevalence.csv")
-T3m <- T3m[-seq(1,50),]
+T3m <- T3m[-1,]
 T6m <- read_csv("dados/data-02-02-2021/T095/it06m/v99/InfectiousPrevalence.csv")
-T6m <- T6m[-seq(1,50),]
+T6m <- T6m[-1,]
 T12m <- read_csv("dados/data-02-02-2021/T095/it12m/v99/InfectiousPrevalence.csv")
-T12m <- T12m[-seq(1,50),]
+T12m <- T12m[-1,]
 T24m <- read_csv("dados/data-02-02-2021/T095/it24m/v99/InfectiousPrevalence.csv")
-T24m <- T24m[-seq(1,50),]
+T24m <- T24m[-1,]
 T36m <- read_csv("dados/data-02-02-2021/T095/it36m/v99/InfectiousPrevalence.csv")
-T36m <- T36m[-seq(1,50),]
+T36m <- T36m[-1,]
 
 #T0m <- T0m[-seq(152,251),]
 #T3m <- T3m[-seq(152,251),]
@@ -483,9 +483,9 @@ orca(PrevalenceV99T95,"imagenstcc/leprosyPrevalence/who/leprosyPrevalenceV99T95.
 #system("mv *.html imagens/html/leprosyprevalence")
 
 prev <- read_csv("dados/data-02-02-2021/T095/it03m/v50/InfectiousPrevalence.csv")
-prev <- prev[-seq(1,50),]
+prev <- prev[-1,]
 ince <- read_csv("dados/data-02-02-2021/T095/it03m/v50/InfectiousIncidence.csv")
-ince <- ince[-seq(1,50),]
+ince <- ince[-1,]
 
 fig <- plot_ly(x=prev$Time, y=prev$TotalInfectious ,name = 'Individuos Infecciosos',mode = 'lines',type = 'scatter',width = 900,height = 800 ) %>%
   add_trace(y= ince$NewInfectious, name = 'Novos Infecciosos', type = 'bar',marker = list(color = 'rgb(158,202,225)',width = 0.1)) %>%
@@ -507,19 +507,19 @@ fig
 orca(fig,"imagenstcc/leprosyPrevalence/who/geral2v50t95.pdf")
 
 prev <- read_csv("dados/data-02-02-2021/T095/it03m/v50/InfectiousPrevalence.csv")
-prev <- prev[-seq(1,50),]
+prev <- prev[-1,]
 prevPB<- read_csv("dados/data-02-02-2021/T095/it03m/v50/InfectiousPrevalencePB.csv")
-prevPB <- prevPB[-seq(1,50),]
+prevPB <- prevPB[-1,]
 prevMB <- read_csv("dados/data-02-02-2021/T095/it03m/v50/InfectiousPrevalenceMB.csv")
-prevMB <- prevMB[-seq(1,50),]
+prevMB <- prevMB[-1,]
 
 
 ince <- read_csv("dados/data-02-02-2021/T095/it03m/v50/InfectiousIncidence.csv")
-ince <- ince[-seq(1,50),]
+ince <- ince[-1,]
 incePB <- read_csv("dados/data-02-02-2021/T095/it03m/v50/InfectiousIncidencePB.csv")
-incePB <- incePB[-seq(1,50),]
+incePB <- incePB[-1,]
 inceMB <- read_csv("dados/data-02-02-2021/T095/it03m/v50/InfectiousIncidenceMB.csv")
-inceMB <- inceMB[-seq(1,50),]
+inceMB <- inceMB[-1,]
 
 fig1 <- plot_ly(x=prev$Time, y=prevPB$TotalInfectiousPB ,name = 'Individuos Infecciosos PB',mode = 'lines', legendgroup = 'group1',type = 'scatter',width = 900,height = 800 ) %>%
   add_trace(y= incePB$NewInfectiousPB, name = 'Novos Infecciosos PB', type = 'bar', legendgroup = 'group1',marker = list(width = 0.1)) %>%
