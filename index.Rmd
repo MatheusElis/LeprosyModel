@@ -1023,7 +1023,7 @@ Por fim, uma maneira de acelerar o controle desta enfermidade, que pode ser impl
 ---
 class: inverse, center, middle
 
-# Obrigado!!
+# That's All Folks!!
 
 matheuselis@id.uff.br
 
