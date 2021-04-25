@@ -9,13 +9,13 @@ date: "30/04/2021"
 encoding: "UTF-8"
 output:
   xaringan::moon_reader:
-    slide_level: 2
     toc: true
     css: 
       [tamu, tamu-fonts]
     chakra: libs/remark-latest.min.js
     lib_dir: libs
     nature:
+      ratio: '14.5:9'
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
@@ -83,7 +83,7 @@ class: inverse, center, middle
 -  Alguns casos podem levar até 20 anos para os sintomas aparecer.
 
 
-```{r imagemMenino, out.width = "70%",echo=FALSE,fig.align='center'}
+```{r imagemMenino, out.width = "60%",echo=FALSE,fig.align='center'}
 include_graphics("Docs/meninohans.png")
 ```
 
@@ -108,7 +108,7 @@ A pigmentação pode variar de uma pigmentação mais clara que a pele, até uma
 
 - O tratamento é feito usando um coquetel de antibióticos adiministrado mensalmente de pelo tempo de tratamento.
 
-```{r out.width = "100%",echo=FALSE,fig.align='center'}
+```{r out.width = "90%",echo=FALSE,fig.align='center'}
 include_graphics("Docs/cartela.png")
 ```
 ???
@@ -189,7 +189,7 @@ $$\begin{align}
     \frac{dI}{dt} &= - \beta S \textbf{I} - \lambda \textbf{I} - \mu \textbf{I}
 \end{align}$$
 
-```{r out.width = "50%",echo=FALSE,fig.align='center'}
+```{r out.width = "45%",echo=FALSE,fig.align='center'}
 include_graphics("Docs/SI.png")
 ```
 
@@ -324,7 +324,7 @@ $$P_{PB} = (1-\epsilon_v)(1-{\beta_{PB}}^{N_{I_{PB}}})$$
 
 - Cada passo da simulação é equivalente a um dia, iniciando no primeiro dia e finalizando ao completar 300 anos.
 
-```{r out.width = "46%",echo=FALSE,fig.align='center'}
+```{r out.width = "41%",echo=FALSE,fig.align='center'}
 include_graphics("Docs/esquemainfeccao.png")
 ```
 
@@ -346,11 +346,11 @@ include_graphics("Docs/esquemainfeccao.png")
 ---
 ## Calibragem do Modelo
 
-```{r calibragem, echo=FALSE,message=FALSE, fig.align='center'}
+```{r calibragem, echo=FALSE,message=FALSE, fig.align='center',results='asis'}
 T0m <- read_csv("dados/data-02-02-2021/T025/it00m/v00/InfectiousPrevalence.csv")
 T0m <- T0m[-seq(102,301),]
 T0m <- T0m[-1,]
-plot_ly( x=T0m$Time, y=T0m$TotalInfectious ,name = 'Prevalência Hanseníase',mode = 'lines',type = 'scatter' ,width = 810,height = 450) %>%
+plot_ly( x=T0m$Time, y=T0m$TotalInfectious ,name = 'Prevalência Hanseníase',mode = 'lines',type = 'scatter' ,width = 900) %>%
   layout(
     colorway = c('#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b'),
     title = list(text = '<b> Calibragem do parâmetro de infectividade </b>'),
@@ -514,7 +514,7 @@ PrevalenceV00T95 <- plot_ly( x=T0m$Time, y=T36m$TotalInfectious ,name = '36 Mese
 
 Vaccine0 <- subplot(PrevalenceV00T25,PrevalenceV00T50,PrevalenceV00T75,PrevalenceV00T95,margin = c(0.05,0.05,0.08,0.08),nrows = 2,titleY = T,titleX = T,shareY = F,shareX = F)
 Vaccine0 <- Vaccine0 %>% layout(autosize = F,
-  width = 810,
+  width = 900,
   annotations = list(
   list(x = -0.05 , y = 0.55, text = "(a)", showarrow = F, xref='paper', yref='paper',xanchor = 'left'),
   list(x = -0.05 , y = -0.05, text = "(c)", showarrow = F, xref='paper', yref='paper',xanchor = 'left'),
@@ -653,7 +653,7 @@ PrevalenceV00T95 <- plot_ly( x=T0m$Time, y=T36m$TotalInfectious ,name = '36 Mese
 
 Vaccine0 <- subplot(PrevalenceV00T25,PrevalenceV00T50,PrevalenceV00T75,PrevalenceV00T95,margin = c(0.05,0.05,0.08,0.08),nrows = 2,titleY = T,titleX = T,shareY = F,shareX = F)
 Vaccine0 <- Vaccine0 %>% layout(autosize = F,
-  width = 810,
+  width = 900,
   annotations = list(
   list(x = -0.05 , y = 0.55, text = "(a)", showarrow = F, xref='paper', yref='paper',xanchor = 'left'),
   list(x = -0.05 , y = -0.05, text = "(c)", showarrow = F, xref='paper', yref='paper',xanchor = 'left'),
@@ -792,7 +792,7 @@ PrevalenceV00T95 <- plot_ly( x=T0m$Time, y=T36m$TotalInfectious ,name = '36 Mese
 
 Vaccine0 <- subplot(PrevalenceV00T25,PrevalenceV00T50,PrevalenceV00T75,PrevalenceV00T95,margin = c(0.05,0.05,0.08,0.08),nrows = 2,titleY = T,titleX = T,shareY = F,shareX = F)
 Vaccine0 <- Vaccine0 %>% layout(autosize = F,
-  width = 810,
+  width = 900,
   annotations = list(
   list(x = -0.05 , y = 0.55, text = "(a)", showarrow = F, xref='paper', yref='paper',xanchor = 'left'),
   list(x = -0.05 , y = -0.05, text = "(c)", showarrow = F, xref='paper', yref='paper',xanchor = 'left'),
@@ -820,7 +820,7 @@ T24m <- T24m[-1,]
 T36m <- read_csv("dados/data-02-02-2021/T075/it36m/v00/InfectiousPrevalence.csv")
 T36m <- T36m[-1,]
 
-plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 810,height = 450) %>%
+plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 900) %>%
   add_trace(y= T3m$ TotalInfectious/div, name = '3 Meses', mode = 'lines') %>%
   add_trace(y= T6m$ TotalInfectious/div, name = '6 Meses', mode = 'lines') %>%
   add_trace(y= T12m$ TotalInfectious/div, name = '12 Meses', mode = 'lines') %>%
@@ -852,7 +852,7 @@ T24m <- read_csv("dados/data-02-02-2021/T095/it24m/v00/InfectiousPrevalence.csv"
 T24m <- T24m[-1,]
 T36m <- read_csv("dados/data-02-02-2021/T095/it36m/v00/InfectiousPrevalence.csv")
 T36m <- T36m[-1,]
-plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 810,height = 450) %>%
+plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 900) %>%
   add_trace(y= T3m$ TotalInfectious/div, name = '3 Meses', mode = 'lines') %>%
   add_trace(y= T6m$ TotalInfectious/div, name = '6 Meses', mode = 'lines') %>%
   add_trace(y= T12m$ TotalInfectious/div, name = '12 Meses', mode = 'lines') %>%
@@ -885,7 +885,7 @@ T24m <- read_csv("dados/data-02-02-2021/T075/it24m/v50/InfectiousPrevalence.csv"
 T24m <- T24m[-1,]
 T36m <- read_csv("dados/data-02-02-2021/T075/it36m/v50/InfectiousPrevalence.csv")
 T36m <- T36m[-1,]
-plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 810,height = 450) %>%
+plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 900) %>%
   add_trace(y= T3m$ TotalInfectious/div, name = '3 Meses', mode = 'lines') %>%
   add_trace(y= T6m$ TotalInfectious/div, name = '6 Meses', mode = 'lines') %>%
   add_trace(y= T12m$ TotalInfectious/div, name = '12 Meses', mode = 'lines') %>%
@@ -917,7 +917,7 @@ T24m <- read_csv("dados/data-02-02-2021/T095/it24m/v50/InfectiousPrevalence.csv"
 T24m <- T24m[-1,]
 T36m <- read_csv("dados/data-02-02-2021/T095/it36m/v50/InfectiousPrevalence.csv")
 T36m <- T36m[-1,]
-plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 810,height = 450) %>%
+plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 900) %>%
   add_trace(y= T3m$ TotalInfectious/div, name = '3 Meses', mode = 'lines') %>%
   add_trace(y= T6m$ TotalInfectious/div, name = '6 Meses', mode = 'lines') %>%
   add_trace(y= T12m$ TotalInfectious/div, name = '12 Meses', mode = 'lines') %>%
@@ -950,7 +950,7 @@ T24m <- read_csv("dados/data-02-02-2021/T075/it24m/v99/InfectiousPrevalence.csv"
 T24m <- T24m[-1,]
 T36m <- read_csv("dados/data-02-02-2021/T075/it36m/v99/InfectiousPrevalence.csv")
 T36m <- T36m[-1,]
-plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 810,height = 450) %>%
+plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 900) %>%
   add_trace(y= T3m$ TotalInfectious/div, name = '3 Meses', mode = 'lines') %>%
   add_trace(y= T6m$ TotalInfectious/div, name = '6 Meses', mode = 'lines') %>%
   add_trace(y= T12m$ TotalInfectious/div, name = '12 Meses', mode = 'lines') %>%
@@ -983,7 +983,7 @@ T24m <- read_csv("dados/data-02-02-2021/T095/it24m/v99/InfectiousPrevalence.csv"
 T24m <- T24m[-1,]
 T36m <- read_csv("dados/data-02-02-2021/T095/it36m/v99/InfectiousPrevalence.csv")
 T36m <- T36m[-1,]
-plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 810,height = 450) %>%
+plot_ly( x=T0m$Time, y=T0m$ TotalInfectious/div ,name = '0 Meses',mode = 'lines',type = 'scatter',width = 900) %>%
   add_trace(y= T3m$ TotalInfectious/div, name = '3 Meses', mode = 'lines') %>%
   add_trace(y= T6m$ TotalInfectious/div, name = '6 Meses', mode = 'lines') %>%
   add_trace(y= T12m$ TotalInfectious/div, name = '12 Meses', mode = 'lines') %>%
@@ -1028,3 +1028,5 @@ class: inverse, center, middle
 matheuselis@id.uff.br
 
 [github.com/MatheusElis/LeprosyModel](https://github.com/MatheusElis/LeprosyModel)
+
+
