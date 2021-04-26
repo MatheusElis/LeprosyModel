@@ -178,7 +178,7 @@ class: inverse, center, middle
 - Que medidas podemos tomar para conter, controlar ou até erradicar uma doença endêmica? 
 
 ---
-## Modelo Susceptível-Infectado (SIS)
+## Modelo Susceptível-Infectado-Susceptível (SIS)
 
 Considerando uma população de tamanho $N$, constante, temos $N=S(t)+I(t).$
 
@@ -195,7 +195,7 @@ include_graphics("Docs/SI.png")
 
 
 ---
-## Modelo Susceptível-Infectado (SIR)
+## Modelo Susceptível-Infectado-Recuperado (SIR)
 
 Considerando uma população de tamanho $N$, constante, temos $N = S(t) + I(t) + R(t)$.
 
@@ -212,7 +212,7 @@ include_graphics("Docs/SIR.png")
 ```
 
 ---
-## Modelo Susceptível-Infectado (SEIR)
+## Modelo Susceptível-Exposto-Infectado-Recuperado (SEIR)
 
 Considerando uma população de tamanho $N$, constante, temos $N = S(t) + E(t) + I(t) + R(t)$.
 
@@ -341,7 +341,9 @@ include_graphics("Docs/esquemainfeccao.png")
 
 - Nos cenários simulados, a probabilidade de tratamento pode ser dada por $P_{treat} \in [0,25;~0,50;~0,75;~0,95]$ e a imunidade da BCG é dada por $\epsilon_v \in [0,00;~0,50;~0,99]$;
 
-- A distribuição de idade é feita de forma aleatória porém com as probabilidades se adaptando aos dados demográficos.  
+- A distribuição de idade é feita de forma aleatória porém com as probabilidades se adaptando aos dados demográficos. ;
+
+- Tempo de identificação variando entre Identificação Imediata, 3 meses, 6 meses, 12 meses, 24 meses e 36 meses.
 
 ---
 ## Calibragem do Modelo
@@ -1009,7 +1011,7 @@ class: inverse, center, middle
 
 - Foi proposto e implementado um modelo para o estudo da dinâmica da Hanseníase no Norte do Brasil com o intuito de saber como controlar a doença, atingindo a meta proposta pela OMS;
 
-- Para efetuar o controle da Hanseníase dentro de um tempo hábil será necessário tratar 95% da população;
+- Para efetuar o controle da Hanseníase dentro de um tempo hábil será necessário tratar 95% dos indivíduos infecciosos;
 
 - Aplicar a vacina BCG no maior numero de crianças possível para implementar imunidade tanto a Hanseníase quanto a outras doenças;
 
