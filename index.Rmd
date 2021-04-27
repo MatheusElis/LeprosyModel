@@ -97,7 +97,7 @@ A pigmentação pode variar de uma pigmentação mais clara que a pele, até uma
 
 - Até a década de 1940 a hanseníase era dada como incurável.
 
-- Os portadores da hanseníase torvavam-se desfigurados e/ou tinham deficiências significativas.
+- Os portadores da hanseníase tornavam-se desfigurados e/ou tinham deficiências significativas.
 
 - Os portadores da hanseníase muitas vezes eram temidos pelo resto da sociedade, e por isso eram isolados e segregados do restante da população.
 
@@ -106,9 +106,9 @@ A pigmentação pode variar de uma pigmentação mais clara que a pele, até uma
 ---
 ## Tratamento e Prevenção
 
-- A prevenção da hanseníase se da na maior parte das vezes pela vacina BCG.
+- A prevenção da hanseníase se dá na maior parte das vezes pela vacina BCG.
 
-- O tratamento é feito usando um coquetel de antibióticos adiministrado mensalmente pelo tempo de tratamento.
+- O tratamento é feito usando um coquetel de antibióticos administrado mensalmente pelo tempo de tratamento.
 
 ```{r out.width = "90%",echo=FALSE,fig.align='center'}
 include_graphics("Docs/cartela.png")
@@ -148,7 +148,7 @@ class: inverse, center, middle
 
 --
 
-- Em que aréas a Modelagem Matemática é aplicada?
+- Em que áreas a Modelagem Matemática é aplicada?
 
 --
 
@@ -160,7 +160,7 @@ class: inverse, center, middle
 
 --
 
-- Nesses modelos, ao contrario dos demais exemplos, não é fácil confirmar a eficácia dos modelos com experimento, os experimentos geralmente são impossíveis e provavelmente seriam antiéticos.
+- Nesses modelos, ao contrário dos demais exemplos, não é fácil confirmar a eficácia dos modelos com experimento, os experimentos geralmente são impossíveis e provavelmente seriam antiéticos.
 
 ---
 ## Modelos Epidemiológicos
@@ -261,10 +261,10 @@ include_graphics("Docs/leprosymodel.png")
 ---
 ## Susceptível
 
-- Os indivíduos susceptíveis tem uma probabilidade de serem contaminados, $P_{MB}$, para o tipo multibacilar, dada pela equação:
+- Os indivíduos susceptíveis têm uma probabilidade de serem contaminados, $P_{MB}$, para o tipo multibacilar, dada pela equação:
 $$P_{MB} = (1-\epsilon_v)(1-{\beta_{MB}}^{N_{I_{MB}}})$$.
 
-- Os indivíduos susceptíveis também tem uma probabilidade de contagio, $P_{PB}$, para o tipo paucibacilar, que é dada pela equação:
+- Os indivíduos susceptíveis também têm uma probabilidade de contágio, $P_{PB}$, para o tipo paucibacilar, que é dada pela equação:
 $$P_{PB} = (1-\epsilon_v)(1-{\beta_{PB}}^{N_{I_{PB}}})$$.
 
 - Cada indivíduo susceptível tem 8 contatos por vizinhança. Além disso, ele pode ter um contato aleatório em qualquer lugar da rede.
@@ -289,9 +289,9 @@ $$P_{PB} = (1-\epsilon_v)(1-{\beta_{PB}}^{N_{I_{PB}}})$$.
 
 - Por estarem no estado ativo da doença, esses indivíduos estão sujeitos a um aumento na probabilidade de morrer, isto é, $\mu_I = 3,5\mu$, sendo $\mu$ a probabilidade de morte natural de um indivíduo.
 
-- Indivíduos portadores de hanseníase do tipo paucibacilar tem uma probabilidade $1 \leq \alpha \leq 0$, de autocura.
+- Indivíduos portadores de hanseníase do tipo paucibacilar têm uma probabilidade $1 \leq \alpha \leq 0$, de autocura.
 
-- Um indivíduo infeccioso tem uma probabilidade $P_{treat}$ de entrar em tratamento, sendo $0 \leq P_{treat} \leq 1$.
+- Um indivíduo infeccioso têm uma probabilidade $P_{treat}$ de entrar em tratamento, sendo $0 \leq P_{treat} \leq 1$.
 
 - Os indivíduos infecciosos, quando selecionados para tratamento, recebem um tempo de identificação aleatório, que varia entre 0 e o tempo máximo de identificação utilizado na simulação. 
 
@@ -320,7 +320,7 @@ $$P_{PB} = (1-\epsilon_v)(1-{\beta_{PB}}^{N_{I_{PB}}})$$.
 ---
 ## Implementação
 
-- Rede quadrada de tamanho linear $L = 317$ e um total de agentes dado por $N = L \times L = 100.489$.
+- Rede quadrada de tamanho linear $L = 317$,  com condições periódicas de contorno,e um total de agentes dado por $N = L \times L = 100.489$.
 
 - Cada agente tem um total de 8 vizinhos fixos mais a possibilidade de ter de 0 a 1 contato aleatorio a cada passo da simulação.
 
@@ -335,7 +335,7 @@ include_graphics("Docs/esquemainfeccao.png")
 
 - Em $t=0$, a rede é inicializada com todos os indivíduos como susceptíveis. 
 
-- 150 indivíduos latentes do tipo PB e 1 indivíduo latente do tipo MB são distribuídos aleatóriamente.
+- 150 indivíduos latentes do tipo PB e 1 indivíduo latente do tipo MB são distribuídos aleatoriamente.
 
 - Do $t=0$ até $t=100~Anos$, não há qualquer tipo de tratamento para que a doença se desenvolva sem intervenção.
 
@@ -346,6 +346,25 @@ include_graphics("Docs/esquemainfeccao.png")
 - A distribuição de idade é feita de forma aleatória, porém, com as probabilidades  de acordo com os dados demográficos da região Norte.
 
 - Tempo de identificação variando: imediata, 3 meses, 6 meses, 12 meses, 24 meses ou 36 meses.
+
+---
+## Parâmetros do Modelo
+
+Os parâmetros gerais utilizados nos modelos são:  
+  
+  
+  
+
+| Parâmetro     	| Descrição                             	| Valor                       	|
+|---------------	|---------------------------------------	|-----------------------------	|
+| $\beta_{MB}$  	| Infectividade do tipo MB              	| $1,73822168 \times 10^{-4}$ 	|
+| $\beta_{PB}$  	| Infectividade do tipo PB              	| $0,5\times\beta_{MB}$         |
+| $\alpha$      	| Probabilidade de autocura (PB)        	| $0,000614$                  	|
+| $\phi_{PB}$   	| Probabilidade de cura (após 6 meses)  	| $0,974$                     	|
+| $\phi_{MB}$   	| Probabilidade de cura (após 12 meses) 	| $0,953$                     	|
+| $\sigma_{PB}$ 	| Probabilidade de recaída (PB)         	| $0,0037$                    	|
+| $\sigma_{MB}$ 	| Probabilidade de recaída (MB)         	| $0,0011$                    	|
+
 
 ---
 ## Calibragem do Modelo
@@ -368,23 +387,6 @@ plot_ly( x=T0m$Time, y=T0m$TotalInfectious ,name = 'Prevalência Hanseníase',mo
 
 ```
 
----
-## Parâmetros do Modelo
-
-Os parâmetros gerais utilizados nos modelos são:  
-  
-  
-  
-
-| Parâmetro     	| Descrição                             	| Valor                       	|
-|---------------	|---------------------------------------	|-----------------------------	|
-| $\beta_{MB}$  	| Infectividade do tipo MB              	| $1,73822168 \times 10^{-4}$ 	|
-| $\beta_{PB}$  	| Infectividade do tipo PB              	| $0,5\times\beta_{MB}$         |
-| $\alpha$      	| Probabilidade de autocura (PB)        	| $0,000614$                  	|
-| $\phi_{PB}$   	| Probabilidade de cura (após 6 meses)  	| $0,974$                     	|
-| $\phi_{MB}$   	| Probabilidade de cura (após 12 meses) 	| $0,953$                     	|
-| $\sigma_{PB}$ 	| Probabilidade de recaída (PB)         	| $0,0037$                    	|
-| $\sigma_{MB}$ 	| Probabilidade de recaída (MB)         	| $0,0011$                    	|
 
 ---
 class: inverse, center, middle
@@ -1016,9 +1018,9 @@ class: inverse, center, middle
 
 - Para efetuar o controle da Hanseníase dentro de um tempo hábil será necessário tratar 95% dos indivíduos infecciosos.
 
-- Aplicar a vacina BCG no maior numero de crianças possível para implementar imunidade tanto a Hanseníase quanto a outras doenças.
+- Aplicar a vacina BCG no maior número de crianças possível para implementar imunidade tanto a Hanseníase quanto a outras doenças.
 
-- Implementar campanhas informativas para auxiliar a identificação dos sintomas da hanseníase e para os indivíduos procurarem auxílio médico o mais rapido possível.
+- Implementar campanhas informativas para auxiliar a identificação dos sintomas da hanseníase e para os indivíduos procurarem auxílio médico o mais rapído possível.
 
 ---
 ## Melhorias Futuras
@@ -1027,7 +1029,7 @@ Por fim, uma maneira de acelerar o controle desta enfermidade, que pode ser impl
 
 Essa técnica consiste em registrar a pessoas no estado ativo da doença e, também, todos aqueles com quem ela teve contato. Assim, os susceptíveis que tiveram contato com a pessoa já doente, receberiam uma medicação que aumentaria sua imunidade. 
 
-Mas, se mesmo assim a doença seja ativada, esta pessoas seria colocado em tratamento, imediatamente. Com isso, é possível que a meta estipulada pela OMS seja atingida em um tempo menor que o previsto pelo modelo implementado neste trabalho.
+Mas, se mesmo assim a doença seja ativada, esta pessoa seria colocado em tratamento, imediatamente. Com isso, é possível que a meta estipulada pela OMS seja atingida em um tempo menor que o previsto pelo modelo implementado neste trabalho.
 
 ---
 class: inverse, center, middle
