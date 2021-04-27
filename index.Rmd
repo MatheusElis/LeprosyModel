@@ -2,8 +2,8 @@
 title: "Estudo da Dinâmica da Hanseníase no Norte do Brasil Via Modelagem Baseada em Agentes"
 subtitle: "Matheus Elis da Silva"
 author: 
-  - "Orientador: Aquino Lauri de Espíndola"
-  - "Co-orientador: Thadeu Josino P. Penna"
+  - "Orientador:Prof. Dr. Aquino Lauri de Espíndola"
+  - "Co-orientador:Prof. Dr. Thadeu Josino P. Penna"
 institute: "Universidade Federal Fluminense"
 date: "30/04/2021"
 encoding: "UTF-8"
@@ -19,6 +19,8 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      navigation:
+        scroll: false
 ---
 <style>
   p.caption {
@@ -27,15 +29,15 @@ output:
 </style>
 ## Sumário
 
--  Hanseníase;
+-  Hanseníase.
  
--  Modelos Epidemiológicos Matemáticos;
+-  Modelos Epidemiológicos Matemáticos.
  
--  Hanseníase: Um modelo Baseado em Agentes;
+-  Hanseníase: Um modelo Baseado em Agentes.
  
--  Implementação;
+-  Implementação.
  
--  Resultados;
+-  Resultados.
 
 -  Conclusão e Planos Futuros.
 
@@ -61,26 +63,26 @@ class: inverse, center, middle
 ---
 ## Características 
 
--  A Hanseníase é causada pelo bacilo *Mycobacterium Leprae*;
+-  A Hanseníase é causada pelo bacilo *Mycobacterium Leprae*.
 
--  É uma doença crônica e progressiva;
+-  É uma doença crônica e progressiva.
 
--  Foi conhecida durantes séculos como Lepra;
+-  Foi conhecida durantes séculos como Lepra.
 
--  É dividida em casos Paucibacilares e Multibacilares;
+-  É dividida em casos Paucibacilares e Multibacilares.
 
--  É transmitida por meio de gotículas de saliva eliminadas na fala, tosse ou espirro, de pessoas não tratadas;
+-  É transmitida por meio de gotículas de saliva eliminadas na fala, tosse ou espirro, de pessoas não tratadas.
 
 -  Indivíduos em tratamento deixam de transmitir a doença.
 
 ---
 ## Sintomas
 
--  Lesões de pele, geralmente, tem uma pigmentação diferente da pele, podendo também ter aspectos achatados, elevados ou nodulos;
+-  Lesões de pele, geralmente, tem uma pigmentação diferente da pele, podendo também ter aspectos achatados, elevados ou nódulos.
 
--  Os sintomas podem ocorrer dentro de 1 ano após o contágio;
+-  Os sintomas podem ocorrer dentro de 6 meses até 5 anos após o contágio.
 
--  Alguns casos podem levar até 20 anos para os sintomas aparecer.
+-  Alguns casos podem levar até 20 anos para os sintomas aparecerem.
 
 
 ```{r imagemMenino, out.width = "60%",echo=FALSE,fig.align='center'}
@@ -93,20 +95,20 @@ A pigmentação pode variar de uma pigmentação mais clara que a pele, até uma
 ---
 ## Estigmas Sociais
 
-- Até a década de 1940 a hanseníase era dada como incurável;
+- Até a década de 1940 a hanseníase era dada como incurável.
 
-- Os portadores da Hanseníase torvavam-se desfigurados e/ou tinham deficiências significativas;
+- Os portadores da hanseníase torvavam-se desfigurados e/ou tinham deficiências significativas.
 
-- Os portadores da Hanseníase muitas vezes eram temidos pelo resto da sociedade, e por isso eram isolados e segregados do restante da população;
+- Os portadores da hanseníase muitas vezes eram temidos pelo resto da sociedade, e por isso eram isolados e segregados do restante da população.
 
 - O estigma social em torno da hanseníase tem um alto impacto psicológico nas suas vítimas.
 
 ---
 ## Tratamento e Prevenção
 
-- A prevenção da Hanseníase se da na maior parte das vezes pela vacina BCG;
+- A prevenção da hanseníase se da na maior parte das vezes pela vacina BCG.
 
-- O tratamento é feito usando um coquetel de antibióticos adiministrado mensalmente de pelo tempo de tratamento.
+- O tratamento é feito usando um coquetel de antibióticos adiministrado mensalmente pelo tempo de tratamento.
 
 ```{r out.width = "90%",echo=FALSE,fig.align='center'}
 include_graphics("Docs/cartela.png")
@@ -117,17 +119,17 @@ e 12 aplicações mensais do coquetel para o caso MB
 ---
 ## Cenário Epidemiológico
 
-- No ano 2000, a OMS publicou o *Guide to Eliminate Leprosy as a Public Health Problem*<sup>1</sup>;
+- No ano 2000, a OMS publicou o *Guide to Eliminate Leprosy as a Public Health Problem*<sup>1</sup>.
 
-- Meta estipulada, de que, a prevalência da doença deveria ser menor que 1/10.000 habitantes, para que a hanseníase deixasse de ser um problema de saúde pública;
+- Meta estipulada: *A prevalência da doença deveria ser menor que 1/10.000 habitantes, para que a hanseníase deixasse de ser um problema de saúde pública.*
 
-- Vários países, incluindo o Brasil, por diversas razões, não conseguiram cumprir essa meta;
+- Vários países, incluindo o Brasil, por diversas razões, não conseguiram cumprir essa meta.
 
-- Em 2019, foram reportados à OMS 202.185 casos novos da doença no mundo;
+- Em 2019, foram reportados à OMS 202.185 casos novos da doença no mundo.
 
-- Em 2019, foram notificados 27.864 casos no Brasil;
+- Em 2019, foram notificados 27.864 casos no Brasil.
 
-- Em 2018, a Região Norte foi responsavel por 31,95% dos novos casos de Hanseníase no Brasil, atrás apenas da Região Centro-Oeste com 41,29%.
+- Em 2018, a Região Norte foi responsável por 31,95% dos novos casos de Hanseníase no Brasil, atrás, apenas, da Região Centro-Oeste com 41,29%.
 <span class="footnote"><sup>1</sup> Guia para Eliminar a Hanseníase como Problema de Saúde Pública - em tradução livre</span>
 
 ---
@@ -154,11 +156,11 @@ class: inverse, center, middle
 
 --
 
-- O nosso foco nesse trabalho serão os Modelos Epidemiológicos;
+- O nosso foco, nesse trabalho é um modelo epidemiológico aplicado à hanseníase
 
 --
 
-- Nesses modelos ao contrario dos demais exemplos, não é possível confirmar a eficácia dos modelos com experimento, os experimentos geralmente são impossíveis e provavelmente seriam antiéticos.
+- Nesses modelos, ao contrario dos demais exemplos, não é fácil confirmar a eficácia dos modelos com experimento, os experimentos geralmente são impossíveis e provavelmente seriam antiéticos.
 
 ---
 ## Modelos Epidemiológicos
@@ -232,13 +234,13 @@ include_graphics("Docs/SEIR.png")
 ---
 ## Modelagem Baseada em Agentes
 
-- É uma técnica de modelagem em que uma coleção de "entidades" autônomas chamadas de agentes, dado um conjunto de regras, são capazes de tomar decisões;
+- É uma técnica de modelagem em que uma coleção de "entidades" autônomas chamadas de agentes, dado um conjunto de regras, são capazes de tomar decisões.
 
-- Os agentes podem exercer decisões simples, até mesmo decisões complexas como inteligências adaptativas;
+- Os agentes podem tomar decisões simples ou até mesmo complexas, como inteligências adaptativas.
 
-- Nos modelos baseado em agentes, mesmo tratando os indivíduos como pertecentes a um determinado compartimento, cada um desses indivíduos, ou agentess podem ser completamente diferentes uns dos outros;
+- Nos modelos baseado em agentes, mesmo tratando os indivíduos como pertencentes a um determinado compartimento, cada um deles pode ser completamente diferente dos demais.
 
-- Os agentes de um mesmo compartimento podem ter características que os diferem, tais como idade, sexo, propensão à adquirir determinada doença etc;
+- Os agentes de um mesmo compartimento podem ter características que os diferem, tais como idade, sexo, propensão à adquirir determinada doença etc.
 
 - A modelagem baseada em agentes é uma técnica robusta, tendo sua aplicação estendida além da modelagem do espalhamento de doenças como em modelos econômicos e, também, em diversas outras áreas da ciência.
 
@@ -260,67 +262,67 @@ include_graphics("Docs/leprosymodel.png")
 ## Susceptível
 
 - Os indivíduos susceptíveis tem uma probabilidade de serem contaminados, $P_{MB}$, para o tipo multibacilar, dada pela equação:
-$$P_{MB} = (1-\epsilon_v)(1-{\beta_{MB}}^{N_{I_{MB}}})$$
+$$P_{MB} = (1-\epsilon_v)(1-{\beta_{MB}}^{N_{I_{MB}}})$$.
 
 - Os indivíduos susceptíveis também tem uma probabilidade de contagio, $P_{PB}$, para o tipo paucibacilar, que é dada pela equação:
-$$P_{PB} = (1-\epsilon_v)(1-{\beta_{PB}}^{N_{I_{PB}}})$$
+$$P_{PB} = (1-\epsilon_v)(1-{\beta_{PB}}^{N_{I_{PB}}})$$.
 
-- Cada indivíduo susceptível tem 8 contatos por vizinhança. Além disso ele pode ter um contato aleatório em qualquer lugar da rede.
+- Cada indivíduo susceptível tem 8 contatos por vizinhança. Além disso, ele pode ter um contato aleatório em qualquer lugar da rede.
 
 ---
 ## Latente
 
-- Os indivíduos no estado latente são hospedeiros do patógeno, porém, não apresentam sintomas e não transmitem a doença;
+- Os indivíduos no estado latente são hospedeiros do patógeno, porém, não apresentam sintomas e não transmitem a doença.
 
-- O tempo de ativação do bacilo varia entre 3 a 4 anos;
+- O tempo de ativação do bacilo varia entre 3 a 4 anos.
 
-- No modelo quando um idivíduo entra no estado latente ele recebe uma tempo de latência gerado aleatoriamente entre o tempo mínimo e máximo de latência;
+- No modelo, quando um indivíduo entra no estado latente,  terá um tempo de latência, gerado aleatoriamente, entre o tempo mínimo e máximo.
 
-- Após atingir esse tempo de latência ele progride para o estado infeccioso.
+- Após atingir o tempo de latência, o indivíduo progride para o estado infeccioso.
 
 ---
 ## Infeccioso
 
-- Os indivíduos infecciosos são aqueles em que sofreram a ativação do bacilo;
+- Os indivíduos infecciosos são aqueles em que sofreram a ativação do bacilo.
 
-- Esses indivíduos passam a apresentar sintomas e a transmitir a doença;
+- Esses indivíduos passam a apresentar sintomas e a transmitir a doença.
 
-- Por estarem no estado ativo da doença, esses indivíduos estão sujeitos a um aumento na probabilidade de morrer, isto é, $\mu_I = 3,5\mu$, sendo $\mu$ a probabilidade de morte natural de um indivíduo;
+- Por estarem no estado ativo da doença, esses indivíduos estão sujeitos a um aumento na probabilidade de morrer, isto é, $\mu_I = 3,5\mu$, sendo $\mu$ a probabilidade de morte natural de um indivíduo.
 
-- Indivíduos portadores de hanseníase do tipo paucibacilar tem uma probabilidade $1 \leq \alpha \leq 0$, de autocura;
+- Indivíduos portadores de hanseníase do tipo paucibacilar tem uma probabilidade $1 \leq \alpha \leq 0$, de autocura.
 
-- Um indivíduo infeccioso tem uma probabilidade $P_{treat}$ de entrar em tratamento, sendo $0 \leq P_{treat} \leq 1$;
+- Um indivíduo infeccioso tem uma probabilidade $P_{treat}$ de entrar em tratamento, sendo $0 \leq P_{treat} \leq 1$.
 
-- Os indivíduos infecciosos que passam na probabilidade de tratamento recebem um tempo de identificação aleatório, que varia entre 0 e o tempo máximo de identificação utilizado na simulação. 
+- Os indivíduos infecciosos, quando selecionados para tratamento, recebem um tempo de identificação aleatório, que varia entre 0 e o tempo máximo de identificação utilizado na simulação. 
 
 ---
 ## Tratamento
 
-- Quando o tempo de identificação definido de um indivíduo infeccioso chega ao fim ele entra em tratamento;
+- Quando o tempo de identificação definido de um indivíduo infeccioso é alcançado, inicia-se o tratamento.
 
-- Indivíduos em tratamento param de transmitir a doença mesmo ainda tendo o patógeno;
+- Indivíduos em tratamento param de transmitir a doença mesmo ainda tendo o patógeno.
 
-- Indivíduos com hanseníase PB tem uma probabilidade, $\phi_{PB}$, de se recuperar após 6 meses de tratamento;
+- Indivíduos com hanseníase PB tem uma probabilidade, $\phi_{PB}$, de se recuperar após 6 meses de tratamento.
 
-- Indivíduos com hanseníase MB tem uma probabilidade, $\phi_{MB}$, de se recuperar após 12 meses de tratamento;
+- Indivíduos com hanseníase MB tem uma probabilidade, $\phi_{MB}$, de se recuperar após 12 meses de tratamento.
 
-- Caso o tratamento falhe, o indivíduo retorna ao compartimento dos infecciosos, voltando a transmitir a doença;
+- Caso o tratamento falhe, o indivíduo retorna ao compartimento dos infecciosos, voltando a transmitir a doença.
 
 - Um método alternativo de tratamento é a aplicação da vacina BCG em crianças menores de 6 anos.
 
 ---
 ## Latente Recuperado
 
-- Os indivíduos em que o tratamento foi bem sucedido, progridem para o estado latente recuperado;
+- Os indivíduos em que o tratamento foi bem sucedido, progridem para o estado latente recuperado.
 
 - Esses indivíduos podem ter uma recaída para a classe infecciosa com probabilidades $\sigma_{PB}$ e $\sigma_{MB}$ para os tipos paucibacilar e multibacilar, respectivamente.
 
 ---
 ## Implementação
 
-- Rede quadrada de tamanho linear $L = 317$ e um total de agentes dado por $N = L \times L = 100.489$;
+- Rede quadrada de tamanho linear $L = 317$ e um total de agentes dado por $N = L \times L = 100.489$.
 
-- Cada agente tem um total de 8 vizinhos fixos mais a possibilidade de ter de 0 a 1 contato aleatorio a cada passo da simulação;
+- Cada agente tem um total de 8 vizinhos fixos mais a possibilidade de ter de 0 a 1 contato aleatorio a cada passo da simulação.
 
 - Cada passo da simulação é equivalente a um dia, iniciando no primeiro dia e finalizando ao completar 300 anos.
 
@@ -331,19 +333,19 @@ include_graphics("Docs/esquemainfeccao.png")
 ---
 ## Implementação (Continuação)
 
-- Em $t=0$, a rede é inicializada com todos os indivíduos como susceptível; 
+- Em $t=0$, a rede é inicializada com todos os indivíduos como susceptíveis. 
 
-- São distribuido aleatóriamente, 150 indivíduos lantente do tipo PB e 1 induvíduo latente do tipo MB;
+- 150 indivíduos latentes do tipo PB e 1 indivíduo latente do tipo MB são distribuídos aleatóriamente.
 
-- Do $t=0$ até $t=100~Anos$, sem qualquer tipo de tratamento para que a doença se desenvolva a na população;
+- Do $t=0$ até $t=100~Anos$, não há qualquer tipo de tratamento para que a doença se desenvolva sem intervenção.
 
-- Após atingir a marca de $t=100~Anos$, serão aplicados os métodos de tratamento;
+- Após atingir a marca de $t=100~Anos$, iniciam-se os métodos de tratamento.
 
-- Nos cenários simulados, a probabilidade de tratamento pode ser dada por $P_{treat} \in [0,25;~0,50;~0,75;~0,95]$ e a imunidade da BCG é dada por $\epsilon_v \in [0,00;~0,50;~0,99]$;
+- Nos cenários simulados, a probabilidade de tratamento pode ser dada por $P_{treat} \in [0,25;~0,50;~0,75;~0,95]$ e a imunidade da BCG é dada por $\epsilon_v \in [0,00;~0,50;~0,99]$.
 
-- A distribuição de idade é feita de forma aleatória porém com as probabilidades se adaptando aos dados demográficos. ;
+- A distribuição de idade é feita de forma aleatória, porém, com as probabilidades  de acordo com os dados demográficos da região Norte.
 
-- Tempo de identificação variando entre Identificação Imediata, 3 meses, 6 meses, 12 meses, 24 meses e 36 meses.
+- Tempo de identificação variando: imediata, 3 meses, 6 meses, 12 meses, 24 meses ou 36 meses.
 
 ---
 ## Calibragem do Modelo
@@ -805,6 +807,7 @@ Vaccine0 <- Vaccine0 %>% layout(autosize = F,
 Vaccine0
 ```
 
+
 ---
 ### Hanseníase Prevalência  - $\epsilon_v = 0,00$ , $P_{treat} = 0,75$
 
@@ -1009,23 +1012,27 @@ class: inverse, center, middle
 ---
 ## Principais Conclusões
 
-- Foi proposto e implementado um modelo para o estudo da dinâmica da Hanseníase no Norte do Brasil com o intuito de saber como controlar a doença, atingindo a meta proposta pela OMS;
+- Foi proposto e implementado um modelo para o estudo da dinâmica da Hanseníase no Norte do Brasil com o intuito de saber como controlar a doença, atingindo a meta proposta pela OMS.
 
-- Para efetuar o controle da Hanseníase dentro de um tempo hábil será necessário tratar 95% dos indivíduos infecciosos;
+- Para efetuar o controle da Hanseníase dentro de um tempo hábil será necessário tratar 95% dos indivíduos infecciosos.
 
-- Aplicar a vacina BCG no maior numero de crianças possível para implementar imunidade tanto a Hanseníase quanto a outras doenças;
+- Aplicar a vacina BCG no maior numero de crianças possível para implementar imunidade tanto a Hanseníase quanto a outras doenças.
 
 - Implementar campanhas informativas para auxiliar a identificação dos sintomas da hanseníase e para os indivíduos procurarem auxílio médico o mais rapido possível.
 
 ---
 ## Melhorias Futuras
 
-Por fim, uma maneira de acelerar o controle desta enfermidade, que pode ser implementado em um trabalho futuro, seria a implementação da técnica de rastreio de contato nos indivíduos infecciosos (*contact tracing*). Essa técnica consiste em registrar a pessoas no estado ativo da doença e, também, todos aqueles com quem ela teve contato. Assim, os susceptíveis que tiveram contato com a pessoa já doente, receberiam uma medicação que aumentaria sua imunidade. Mas, se mesmo assim a doença seja ativada, esta pessoas seria colocado em tratamento, imediatamente. Com isso, é possível que a meta estipulada pela OMS seja atingida em um tempo menor que o previsto pelo modelo implementado neste trabalho.
+Por fim, uma maneira de acelerar o controle desta enfermidade, que pode ser implementado em um trabalho futuro, seria a implementação da técnica de rastreio de contato nos indivíduos infecciosos (*contact tracing*). 
+
+Essa técnica consiste em registrar a pessoas no estado ativo da doença e, também, todos aqueles com quem ela teve contato. Assim, os susceptíveis que tiveram contato com a pessoa já doente, receberiam uma medicação que aumentaria sua imunidade. 
+
+Mas, se mesmo assim a doença seja ativada, esta pessoas seria colocado em tratamento, imediatamente. Com isso, é possível que a meta estipulada pela OMS seja atingida em um tempo menor que o previsto pelo modelo implementado neste trabalho.
 
 ---
 class: inverse, center, middle
 
-# That's All Folks!!
+# Obrigado!!
 
 matheuselis@id.uff.br
 
